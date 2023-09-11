@@ -16,7 +16,7 @@ This section delves into I2C, another widely-used serial communication protocol,
 ### Ethernet: 
 Dive into the basics of Ethernet communication, including protocols, frames, and how to implement an Ethernet interface in an FPGA system.
 
-### Error Detection Code
+## Error Detection Code
 
 ### CRC (Cyclic Redundancy Check): 
 Learn how CRC is used to detect errors in transmitted data and how to implement it in VHDL to ensure data integrity.
