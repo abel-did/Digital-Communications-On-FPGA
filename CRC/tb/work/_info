@@ -10,83 +10,86 @@ z2
 cModel Technology
 Z0 dC:/Users/Abel/Documents/GitHub/Digital-Communications-On-FPGA/CRC/tb
 Ecrc_8
-Z1 w1694984253
-Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z1 w1694987031
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 !i122 0
 R0
-Z4 8../rtl/crc_8.vhd
-Z5 F../rtl/crc_8.vhd
+Z5 8../rtl/crc_8.vhd
+Z6 F../rtl/crc_8.vhd
 l0
 L27 1
-V[WZYUI0QWiIoC?1B?i>fZ1
-!s100 Nic:JJzZ31_1kYPRCkfjk1
-Z6 OV;C;2020.1;71
+Vl2Pg1GA4dK9_2>aWW0T[:2
+!s100 HPXcA[0Xkc0k<ZP`R3_M60
+Z7 OV;C;2020.1;71
 32
-Z7 !s110 1694984255
+Z8 !s110 1694987033
 !i10b 1
-Z8 !s108 1694984255.000000
-Z9 !s90 -reportprogress|300|../rtl/crc_8.vhd|
-Z10 !s107 ../rtl/crc_8.vhd|
+Z9 !s108 1694987033.000000
+Z10 !s90 -reportprogress|300|../rtl/crc_8.vhd|
+Z11 !s107 ../rtl/crc_8.vhd|
 !i113 1
-Z11 tExplicit 1 CvgOpt 0
+Z12 tExplicit 1 CvgOpt 0
 Artl
 R2
 R3
-Z12 DEx4 work 5 crc_8 0 22 [WZYUI0QWiIoC?1B?i>fZ1
+R4
+Z13 DEx4 work 5 crc_8 0 22 l2Pg1GA4dK9_2>aWW0T[:2
 !i122 0
 l40
 L37 35
-VZ_zR`7gm:e3cJaJ[OY`Hf1
-!s100 mLFnEe?FYjkLz_5_P^TDG1
-R6
-32
+Vji]GoARi1jGNiWfV@A2`53
+!s100 8DJYT95V=ihZWBJbNb:HX3
 R7
-!i10b 1
+32
 R8
+!i10b 1
 R9
 R10
-!i113 1
 R11
+!i113 1
+R12
 Etb_crc_8
-Z13 w1694979767
-R2
+Z14 w1694979767
 R3
+R4
 !i122 1
 R0
-Z14 8tb_crc_8.vhd
-Z15 Ftb_crc_8.vhd
+Z15 8tb_crc_8.vhd
+Z16 Ftb_crc_8.vhd
 l0
 L4 1
 VDQZY:^:<HEObYU?f_LIol0
 !s100 JRA4o<WCVdI:Te26;fC4K3
-R6
-33
 R7
-!i10b 1
+33
 R8
-Z16 !s90 -reportprogress|300|-2008|tb_crc_8.vhd|
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-2008|tb_crc_8.vhd|
 !s107 tb_crc_8.vhd|
 !i113 1
-Z17 o-2008
-R11
-Atesbench
+Z18 o-2008
 R12
+Atesbench
 R2
+R13
 R3
+R4
 DEx4 work 8 tb_crc_8 0 22 DQZY:^:<HEObYU?f_LIol0
 !i122 1
 l36
 L7 79
 V^i<@?L9=ObhI;;jHXc]W;0
 !s100 4HS6fYRo4k:DFfzYXX]Ra3
-R6
-33
 R7
-!i10b 1
+33
 R8
-R16
-Z18 !s107 tb_crc_8.vhd|
-!i113 1
+!i10b 1
+R9
 R17
-R11
+Z19 !s107 tb_crc_8.vhd|
+!i113 1
+R18
+R12
