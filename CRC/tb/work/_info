@@ -1,0 +1,92 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Abel/Documents/GitHub/Digital-Communications-On-FPGA/CRC/tb
+Ecrc_8
+Z1 w1694979610
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z4 8../rtl/crc_8.vhd
+Z5 F../rtl/crc_8.vhd
+l0
+L27 1
+V[WZYUI0QWiIoC?1B?i>fZ1
+!s100 Nic:JJzZ31_1kYPRCkfjk1
+Z6 OV;C;2020.1;71
+32
+Z7 !s110 1694981095
+!i10b 1
+Z8 !s108 1694981095.000000
+Z9 !s90 -reportprogress|300|../rtl/crc_8.vhd|
+Z10 !s107 ../rtl/crc_8.vhd|
+!i113 1
+Z11 tExplicit 1 CvgOpt 0
+Artl
+R2
+R3
+Z12 DEx4 work 5 crc_8 0 22 [WZYUI0QWiIoC?1B?i>fZ1
+!i122 0
+l39
+L37 23
+VRNTCfC`gIL1ii?60;35nU0
+!s100 4GNlP5KWI4NIiH40EFhzZ0
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+Etb_crc_8
+Z13 w1694979767
+R2
+R3
+!i122 1
+R0
+Z14 8tb_crc_8.vhd
+Z15 Ftb_crc_8.vhd
+l0
+L4 1
+VDQZY:^:<HEObYU?f_LIol0
+!s100 JRA4o<WCVdI:Te26;fC4K3
+R6
+33
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-2008|tb_crc_8.vhd|
+!s107 tb_crc_8.vhd|
+!i113 1
+Z17 o-2008
+R11
+Atesbench
+R12
+R2
+R3
+DEx4 work 8 tb_crc_8 0 22 DQZY:^:<HEObYU?f_LIol0
+!i122 1
+l36
+L7 79
+V^i<@?L9=ObhI;;jHXc]W;0
+!s100 4HS6fYRo4k:DFfzYXX]Ra3
+R6
+33
+R7
+!i10b 1
+R8
+R16
+Z18 !s107 tb_crc_8.vhd|
+!i113 1
+R17
+R11

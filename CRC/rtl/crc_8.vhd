@@ -36,6 +36,7 @@ end entity;
 
 architecture rtl of crc_8 is
     signal crc_dff : std_logic_vector(7 downto 0);
+    signal 
 begin
 
     -- CRC 
@@ -45,7 +46,7 @@ begin
         crc_dff <= (others => '0');
         crc_out <= (others => '0');
       elsif rising_edge(clk) then
-        if init = '0' then
+        if init = '1' then
           crc_dff <= (others => '0');
         else
           crc_dff(0) <= data_in xor crc_dff(7);
