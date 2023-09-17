@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dC:/Users/Abel/Documents/GitHub/Digital-Communications-On-FPGA/CRC/tb
 Ecrc_8
-Z1 w1694979610
+Z1 w1694984253
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 !i122 0
@@ -23,9 +23,9 @@ V[WZYUI0QWiIoC?1B?i>fZ1
 !s100 Nic:JJzZ31_1kYPRCkfjk1
 Z6 OV;C;2020.1;71
 32
-Z7 !s110 1694981095
+Z7 !s110 1694984255
 !i10b 1
-Z8 !s108 1694981095.000000
+Z8 !s108 1694984255.000000
 Z9 !s90 -reportprogress|300|../rtl/crc_8.vhd|
 Z10 !s107 ../rtl/crc_8.vhd|
 !i113 1
@@ -35,10 +35,10 @@ R2
 R3
 Z12 DEx4 work 5 crc_8 0 22 [WZYUI0QWiIoC?1B?i>fZ1
 !i122 0
-l39
-L37 23
-VRNTCfC`gIL1ii?60;35nU0
-!s100 4GNlP5KWI4NIiH40EFhzZ0
+l40
+L37 35
+VZ_zR`7gm:e3cJaJ[OY`Hf1
+!s100 mLFnEe?FYjkLz_5_P^TDG1
 R6
 32
 R7
