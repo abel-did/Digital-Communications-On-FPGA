@@ -1,12 +1,12 @@
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
+
 --------------------------------------------
 --           CRC 8 bits 
 -- g(x) = 1 + x + x^2 + x^8
 --------------------------------------------
--- Authors :
--- Date    :
+-- Authors : Elio KHAZAAL & Abel DIDOUH
+-- Date    : 18 / 09 / 2023
 --------------------------------------------
 --        INPUTS
 --------------------------------------------
@@ -35,37 +35,24 @@ entity crc_8 is
 end entity;
 
 architecture rtl of crc_8 is
-    signal crc_dff : std_logic_vector(7 downto 0) := (others => '0');
-    signal compteur : unsigned(46 downto 0) := (others => '0');
+    signal crc_dff : std_logic_vector(7 downto 0);
 begin
-
-    -- CRC 
     process(clk, resetn, init)
     begin
       if resetn = '0' then
-        crc_dff <= (others => '0');
         crc_out <= (others => '0');
-        compteur <= (others => '0');
+        crc_dff <= (others => '0');
       elsif rising_edge(clk) then
-          if init = '1' then
-            crc_dff <= (others => '0');
-            crc_out <= (others => '0');
-            compteur <= (others => '0');
-          else 
-            crc_dff(0) <= data_in xor crc_dff(7);
-            crc_dff(1) <= crc_dff(0) xor data_in xor crc_dff(7);
-            crc_dff(2) <= crc_dff(1) xor data_in xor crc_dff(7);
-            crc_dff(7 downto 3) <= crc_dff(6 downto 2); 
-          end if;
-          
-          if compteur >= 46 then
-            crc_out <= crc_dff;
-            compteur <= (others => '0');
-          else
-            compteur <= compteur + 1;
-          end if;
-
+        if init = '1' then
+          crc_dff <= (others => '0');
+          crc_out <= (others => '0');
+        else 
+          crc_dff(0) <= crc_dff(7) xor data_in;
+          crc_dff(1) <= crc_dff(0) xor crc_dff(7) xor data_in;
+          crc_dff(2) <= crc_dff(1) xor crc_dff(7) xor data_in;
+          crc_dff(7 downto 3) <= crc_dff(6 downto 2);
+        end if; 
       end if;
+      crc_out(7 downto 0) <= crc_dff(7 downto 0);
     end process;
-    
 end architecture;
