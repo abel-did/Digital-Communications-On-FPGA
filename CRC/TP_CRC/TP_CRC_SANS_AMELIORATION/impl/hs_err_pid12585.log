@@ -1,0 +1,11 @@
+#
+# An unexpected error has occurred (11)
+#
+Stack:
+/nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/tps/lnx64/jre11.0.11_9/lib//server/libjvm.so(+0xbefecb) [0x7fef1e4a7ecb]
+/nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/tps/lnx64/jre11.0.11_9/lib//server/libjvm.so(JVM_handle_linux_signal+0xd1) [0x7fef1e4aec81]
+/nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/tps/lnx64/jre11.0.11_9/lib//server/libjvm.so(+0xbead23) [0x7fef1e4a2d23]
+/lib/x86_64-linux-gnu/libc.so.6(+0x38d60) [0x7fef7559fd60]
+/nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/lib/lnx64.o/librdi_common.so(HI18N::Convert::In(wchar_t const*, wchar_t const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::codecvt<wchar_t, char, __mbstate_t> const&)+0x36) [0x7fef764c7a66]
+/nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/lib/lnx64.o/librdi_common.so(Java_ui_data_msgmgr_messagemanageri_getMessages+0x1cf) [0x7fef76546dff]
+[0x7fef0dbb2b3d]

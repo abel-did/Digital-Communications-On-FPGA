@@ -1,0 +1,16 @@
+QuestaSim-64 vmap 2022.2 Lib Mapping Utility 2022.04 Apr 25 2022
+vmap xil_defaultlib questa_lib/msim/xil_defaultlib 
+Modifying modelsim.ini
+QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+Start time: 17:25:51 on Sep 23,2023
+vcom -64 -2008 -work xil_defaultlib ../../../../../../rtl/crc_8.vhd ../../../../../../tb/tb_crc_8.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity crc_8
+-- Compiling architecture rtl of crc_8
+-- Compiling entity tb_crc_8
+-- Compiling architecture tesbench of tb_crc_8
+-- Loading entity crc_8
+End time: 17:25:52 on Sep 23,2023, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0

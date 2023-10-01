@@ -1,0 +1,196 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Wed Sep 27 20:13:22 2023
+# Process ID: 129943
+# Current directory: /user/didouha/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_AVEC_AMELIORATION/impl
+# Command line: vivado
+# Log file: /user/didouha/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_AVEC_AMELIORATION/impl/vivado.log
+# Journal file: /user/didouha/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_AVEC_AMELIORATION/impl/vivado.jou
+# Running On: pc3401g, OS: Linux, CPU Frequency: 1051.650 MHz, CPU Physical cores: 8, Host memory: 16538 MB
+#-----------------------------------------------------------
+start_gui
+Sourcing tcl script '/nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/scripts/Vivado_init.tcl'
+ESIEE Paris custom init
+(/nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/scripts/Vivado_init.tcl)
+(others ESIEE custom config in : ~/.Xilinx/Vivado/2022.1/vivado.ini)
+ * Checking LANG, result should be en_US.UTF-8 : result=en_US.UTF-8
+ * Raising 'multi-driven net on pin' (critical warning) severity to error
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+open_project /user/didouha/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_AVEC_AMELIORATION/impl/project_CRC/project_CRC.xpr
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/user/didouha/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_AVEC_AMELIORATION/impl/project_CRC/project_CRC.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 7585.457 ; gain = 47.027 ; free physical = 5416 ; free virtual = 18097
+update_compile_order -fileset sources_1
+reset_simulation -simset sim_1 -mode post-implementation -type timing
+INFO: [Vivado 12-2266] Removing simulation data...
+INFO: [Vivado 12-2267] Reset complete
+launch_simulation -install_path /nfs/opt/eda/tools/siemens/questa-2022.2/questasim/bin -gcc_install_path /nfs/opt/eda/tools/siemens/questa-2022.2/questasim/gcc-7.4.0-linux_x86_64/bin -mode post-implementation -type timing
+Command: launch_simulation  -mode post-implementation -type timing -install_path /nfs/opt/eda/tools/siemens/questa-2022.2/questasim/bin -gcc_install_path /nfs/opt/eda/tools/siemens/questa-2022.2/questasim/gcc-7.4.0-linux_x86_64/bin
+INFO: [Vivado 12-12493] Simulation top is 'tb_crc_8'
+INFO: [Vivado 12-5682] Launching post-implementation timing simulation in '/user/didouha/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_AVEC_AMELIORATION/impl/project_CRC/project_CRC.sim/sim_1/impl/timing/questa'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-Questa-47] Finding simulator installation...
+INFO: [USF-Questa-50] Using simulator executables from '/nfs/opt/eda/tools/siemens/questa-2022.2/questasim/bin/vsim'
+INFO: [SIM-utils-72] Using boost library from '/nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/tps/boost_1_72_0'
+INFO: [SIM-utils-20] The target language is set to VHDL, it is not supported for simulation type 'timing', using Verilog instead.
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7605.465 ; gain = 0.000 ; free physical = 5128 ; free virtual = 17811
+INFO: [Project 1-479] Netlist was created with Vivado 2022.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF Files: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.72 . Memory (MB): peak = 7755.980 ; gain = 0.000 ; free physical = 4498 ; free virtual = 17181
+Restored from archive | CPU: 0.100000 secs | Memory: 0.054337 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.72 . Memory (MB): peak = 7755.980 ; gain = 0.000 ; free physical = 4498 ; free virtual = 17181
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7755.980 ; gain = 0.000 ; free physical = 4479 ; free virtual = 17162
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:23 ; elapsed = 00:00:22 . Memory (MB): peak = 8000.258 ; gain = 396.789 ; free physical = 4325 ; free virtual = 17008
+INFO: [SIM-utils-31] Writing simulation netlist file for design 'impl_1'...
+INFO: [SIM-utils-32] write_verilog -mode timesim -nolib -sdf_anno true -force -file "/user/didouha/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_AVEC_AMELIORATION/impl/project_CRC/project_CRC.sim/sim_1/impl/timing/questa/tb_crc_8_time_impl.v"
+INFO: [SIM-utils-34] Writing SDF file...
+INFO: [SIM-utils-35] write_sdf -mode timesim -process_corner slow -force -file "/user/didouha/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_AVEC_AMELIORATION/impl/project_CRC/project_CRC.sim/sim_1/impl/timing/questa/tb_crc_8_time_impl.sdf"
+INFO: [SIM-utils-36] Netlist generated:/user/didouha/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_AVEC_AMELIORATION/impl/project_CRC/project_CRC.sim/sim_1/impl/timing/questa/tb_crc_8_time_impl.v
+INFO: [SIM-utils-37] SDF generated:/user/didouha/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_AVEC_AMELIORATION/impl/project_CRC/project_CRC.sim/sim_1/impl/timing/questa/tb_crc_8_time_impl.sdf
+INFO: [USF-Questa-7] Finding pre-compiled libraries...
+INFO: [USF_Questa-11] File '/nfs/opt/eda/tools/siemens/questa-2022.2/libs/xilinx_vivado-2022.1/modelsim.ini' copied to run dir:'/user/didouha/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_AVEC_AMELIORATION/impl/project_CRC/project_CRC.sim/sim_1/impl/timing/questa'
+INFO: [SIM-utils-80] Simulation library compiled with '7.4.0' version ('/nfs/opt/eda/tools/siemens/questa-2022.2/libs/xilinx_vivado-2022.1)
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_crc_8' in fileset 'sim_1'...
+INFO: [USF-Questa-2] Questa::Compile design
+INFO: [USF-Questa-15] Creating automatic 'do' files...
+INFO: [USF-Questa-69] Executing 'COMPILE and ANALYZE' step in '/user/didouha/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_AVEC_AMELIORATION/impl/project_CRC/project_CRC.sim/sim_1/impl/timing/questa'
+QuestaSim-64 vmap 2022.2 Lib Mapping Utility 2022.04 Apr 25 2022
+vmap xil_defaultlib questa_lib/msim/xil_defaultlib 
+Modifying modelsim.ini
+QuestaSim-64 vlog 2022.2 Compiler 2022.04 Apr 25 2022
+Start time: 20:16:21 on Sep 27,2023
+vlog -64 -incr -mfcu -work xil_defaultlib tb_crc_8_time_impl.v 
+-- Compiling module crc_8
+-- Compiling module glbl
+
+Top level modules:
+	crc_8
+	glbl
+End time: 20:16:22 on Sep 27,2023, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+Start time: 20:16:22 on Sep 27,2023
+vcom -64 -2008 -work xil_defaultlib ../../../../../../../tb/tb_crc_8.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity tb_crc_8
+-- Compiling architecture tesbench of tb_crc_8
+-- Loading package vl_types
+-- Loading entity crc_8
+End time: 20:16:23 on Sep 27,2023, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+INFO: [USF-Questa-69] 'compile' step finished in '4' seconds
+INFO: [USF-Questa-3] Questa::Elaborate design
+INFO: [USF-Questa-69] Executing 'ELABORATE' step in '/user/didouha/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_AVEC_AMELIORATION/impl/project_CRC/project_CRC.sim/sim_1/impl/timing/questa'
+QuestaSim-64 vopt 2022.2 Compiler 2022.04 Apr 25 2022
+** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+Start time: 20:16:24 on Sep 27,2023
+vopt "+acc=npr" -suppress 10016 -L xil_defaultlib -L simprims_ver -L secureip -work xil_defaultlib xil_defaultlib.tb_crc_8 xil_defaultlib.glbl -o tb_crc_8_opt 
+
+Top level modules:
+	tb_crc_8
+	glbl
+
+Analyzing design...
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading entity tb_crc_8
+-- Loading architecture tesbench of tb_crc_8
+-- Loading package vl_types
+-- Loading entity crc_8
+-- Loading module glbl
+-- Loading module crc_8
+-- Loading module simprims_ver.BUFG
+-- Loading module simprims_ver.IBUF
+-- Loading module simprims_ver.LUT3
+-- Loading UDP simprims_ver.x_lut3_mux8
+-- Loading module simprims_ver.LUT4
+-- Loading module simprims_ver.LUT2
+-- Loading UDP simprims_ver.x_lut2_mux4
+-- Loading module simprims_ver.LUT1
+-- Loading UDP simprims_ver.x_lut1_mux2
+-- Loading module simprims_ver.FDCE
+-- Loading module simprims_ver.OBUF
+
+Waiting for 1 SDF compilation to complete...
+-- Compiling typ SDF from tb_crc_8_time_impl.sdf
+Finished SDF compilation.
+
+Optimizing 14 design-units (inlining 0/2 module instances, 0/38 cell instances, 7/7 UDP instances, 0/1 architecture instances):
+-- Optimizing architecture tesbench of tb_crc_8
+-- Optimizing module simprims_ver.FDCE(fast)
+-- Optimizing module crc_8(fast)
+-- Optimizing module simprims_ver.LUT4(fast)
+-- Optimizing module glbl(fast)
+-- Inlining UDP simprims_ver.x_lut3_mux8
+-- Optimizing module simprims_ver.LUT3(fast)
+-- Optimizing module simprims_ver.IBUF(fast)
+-- Inlining UDP simprims_ver.x_lut2_mux4
+-- Optimizing module simprims_ver.LUT2(fast)
+-- Inlining UDP simprims_ver.x_lut1_mux2
+-- Optimizing module simprims_ver.LUT1(fast)
+-- Optimizing module simprims_ver.OBUF(fast)
+-- Optimizing module simprims_ver.BUFG(fast)
+Optimized design name is tb_crc_8_opt
+End time: 20:16:29 on Sep 27,2023, Elapsed time: 0:00:05
+Errors: 0, Warnings: 1
+execute_script: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 8000.258 ; gain = 0.000 ; free physical = 4441 ; free virtual = 17156
+INFO: [USF-Questa-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-Questa-4] Questa::Simulate design
+INFO: [USF-Questa-69] Executing 'SIMULATE' step in '/user/didouha/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_AVEC_AMELIORATION/impl/project_CRC/project_CRC.sim/sim_1/impl/timing/questa'
+Program launched (PID=131507)
+launch_simulation: Time (s): cpu = 00:00:27 ; elapsed = 00:00:34 . Memory (MB): peak = 8000.258 ; gain = 396.789 ; free physical = 4435 ; free virtual = 17149
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 27 20:41:51 2023...

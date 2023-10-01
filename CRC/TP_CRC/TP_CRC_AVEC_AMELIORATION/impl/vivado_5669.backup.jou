@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sat Sep 23 17:07:19 2023
+# Process ID: 5669
+# Current directory: /user/didouha/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_AVEC_AMELIORATION/impl
+# Command line: vivado
+# Log file: /user/didouha/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_AVEC_AMELIORATION/impl/vivado.log
+# Journal file: /user/didouha/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_AVEC_AMELIORATION/impl/vivado.jou
+# Running On: pc3401l, OS: Linux, CPU Frequency: 884.926 MHz, CPU Physical cores: 8, Host memory: 16538 MB
+#-----------------------------------------------------------
+start_gui
+create_project project_CRC /user/didouha/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_AVEC_AMELIORATION/impl/project_CRC -part xc7a35tcpg236-1
+set_property board_part digilentinc.com:basys3:part0:1.2 [current_project]
+set_property target_language VHDL [current_project]
+add_files -norecurse /user/didouha/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_AVEC_AMELIORATION/rtl/crc_8.vhd
+add_files -fileset constrs_1 -norecurse /user/didouha/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_AVEC_AMELIORATION/impl/basys3.xdc
+set_property compxlib.questa_compiled_library_dir /nfs/opt/eda/tools/siemens/questa-2022.2/libs/xilinx_vivado-2022.1 [current_project]
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse /user/didouha/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_AVEC_AMELIORATION/tb/tb_crc_8.vhd
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+set_property target_simulator Questa [current_project]
+set_property -name {questa.compile.vhdl_syntax} -value {2008} -objects [get_filesets sim_1]
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
+launch_simulation -install_path /nfs/opt/eda/tools/siemens/questa-2022.2/questasim/bin -gcc_install_path /nfs/opt/eda/tools/siemens/questa-2022.2/questasim/gcc-7.4.0-linux_x86_64/bin
+launch_simulation -install_path /nfs/opt/eda/tools/siemens/questa-2022.2/questasim/bin -gcc_install_path /nfs/opt/eda/tools/siemens/questa-2022.2/questasim/gcc-7.4.0-linux_x86_64/bin -mode post-implementation -type timing

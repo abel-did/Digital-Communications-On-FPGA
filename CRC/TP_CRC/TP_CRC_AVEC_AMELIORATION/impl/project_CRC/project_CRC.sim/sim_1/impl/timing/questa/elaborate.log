@@ -1,0 +1,53 @@
+QuestaSim-64 vopt 2022.2 Compiler 2022.04 Apr 25 2022
+** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+Start time: 20:16:24 on Sep 27,2023
+vopt "+acc=npr" -suppress 10016 -L xil_defaultlib -L simprims_ver -L secureip -work xil_defaultlib xil_defaultlib.tb_crc_8 xil_defaultlib.glbl -o tb_crc_8_opt 
+
+Top level modules:
+	tb_crc_8
+	glbl
+
+Analyzing design...
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading entity tb_crc_8
+-- Loading architecture tesbench of tb_crc_8
+-- Loading package vl_types
+-- Loading entity crc_8
+-- Loading module glbl
+-- Loading module crc_8
+-- Loading module simprims_ver.BUFG
+-- Loading module simprims_ver.IBUF
+-- Loading module simprims_ver.LUT3
+-- Loading UDP simprims_ver.x_lut3_mux8
+-- Loading module simprims_ver.LUT4
+-- Loading module simprims_ver.LUT2
+-- Loading UDP simprims_ver.x_lut2_mux4
+-- Loading module simprims_ver.LUT1
+-- Loading UDP simprims_ver.x_lut1_mux2
+-- Loading module simprims_ver.FDCE
+-- Loading module simprims_ver.OBUF
+
+Waiting for 1 SDF compilation to complete...
+-- Compiling typ SDF from tb_crc_8_time_impl.sdf
+Finished SDF compilation.
+
+Optimizing 14 design-units (inlining 0/2 module instances, 0/38 cell instances, 7/7 UDP instances, 0/1 architecture instances):
+-- Optimizing architecture tesbench of tb_crc_8
+-- Optimizing module simprims_ver.FDCE(fast)
+-- Optimizing module crc_8(fast)
+-- Optimizing module simprims_ver.LUT4(fast)
+-- Optimizing module glbl(fast)
+-- Inlining UDP simprims_ver.x_lut3_mux8
+-- Optimizing module simprims_ver.LUT3(fast)
+-- Optimizing module simprims_ver.IBUF(fast)
+-- Inlining UDP simprims_ver.x_lut2_mux4
+-- Optimizing module simprims_ver.LUT2(fast)
+-- Inlining UDP simprims_ver.x_lut1_mux2
+-- Optimizing module simprims_ver.LUT1(fast)
+-- Optimizing module simprims_ver.OBUF(fast)
+-- Optimizing module simprims_ver.BUFG(fast)
+Optimized design name is tb_crc_8_opt
+End time: 20:16:29 on Sep 27,2023, Elapsed time: 0:00:05
+Errors: 0, Warnings: 1

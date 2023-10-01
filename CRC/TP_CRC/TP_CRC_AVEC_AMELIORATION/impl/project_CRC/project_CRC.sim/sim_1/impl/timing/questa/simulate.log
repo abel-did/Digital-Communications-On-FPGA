@@ -1,0 +1,106 @@
+# //  Questa Sim-64
+# //  Version 2022.2 linux_x86_64 Apr 25 2022
+# //
+# //  Copyright 1991-2022 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do {tb_crc_8_simulate.do}
+# vsim "+transport_int_delays" "+pulse_e/0" "+pulse_int_e/0" "+pulse_r/0" "+pulse_int_r/0" -lib xil_defaultlib tb_crc_8_opt 
+# Start time: 20:16:45 on Sep 27,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading verilog.vl_types(body)
+# Loading work.tb_crc_8(tesbench)#1
+# Loading work.glbl(fast)
+# Loading work.crc_8(fast)
+# Loading simprims_ver.BUFG(fast)
+# Loading simprims_ver.IBUF(fast)
+# Loading simprims_ver.LUT3(fast)
+# Loading simprims_ver.LUT4(fast)
+# Loading simprims_ver.LUT2(fast)
+# Loading simprims_ver.LUT1(fast)
+# Loading simprims_ver.FDCE(fast)
+# Loading simprims_ver.OBUF(fast)
+# Loading instances from tb_crc_8_time_impl.sdf
+# Loading timing data from tb_crc_8_time_impl.sdf
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 fs  Iteration: 0  Instance: /tb_crc_8 File: ../../../../../../../tb/tb_crc_8.vhd
+# 1
+# 1
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: Test 1
+#    Time: 100 ns  Iteration: 0  Instance: /tb_crc_8
+# ** Warning: CRC not OK
+#    Time: 950 ns  Iteration: 0  Instance: /tb_crc_8
+# ** Note: resultat attendu : 0x07
+#    Time: 950 ns  Iteration: 0  Instance: /tb_crc_8
+# ** Note: resultat obtenu : 0x0E
+#    Time: 950 ns  Iteration: 0  Instance: /tb_crc_8
+restart
+restart -f; run 7 us
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.glbl(fast)
+# Loading work.crc_8(fast)
+# Loading simprims_ver.BUFG(fast)
+# Loading simprims_ver.IBUF(fast)
+# Loading simprims_ver.LUT3(fast)
+# Loading simprims_ver.LUT4(fast)
+# Loading simprims_ver.LUT2(fast)
+# Loading simprims_ver.LUT1(fast)
+# Loading simprims_ver.FDCE(fast)
+# Loading simprims_ver.OBUF(fast)
+# Loading instances from tb_crc_8_time_impl.sdf
+# Loading timing data from tb_crc_8_time_impl.sdf
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 fs  Iteration: 0  Instance: /tb_crc_8 File: ../../../../../../../tb/tb_crc_8.vhd
+# ** Note: Test 1
+#    Time: 100 ns  Iteration: 0  Instance: /tb_crc_8
+# ** Warning: CRC not OK
+#    Time: 950 ns  Iteration: 0  Instance: /tb_crc_8
+# ** Note: resultat attendu : 0x07
+#    Time: 950 ns  Iteration: 0  Instance: /tb_crc_8
+# ** Note: resultat obtenu : 0x0E
+#    Time: 950 ns  Iteration: 0  Instance: /tb_crc_8
+# ** Note: Test 2
+#    Time: 1350 ns  Iteration: 0  Instance: /tb_crc_8
+# ** Warning: CRC not OK
+#    Time: 2210 ns  Iteration: 0  Instance: /tb_crc_8
+# ** Note: resultat attendu : 0x0E
+#    Time: 2210 ns  Iteration: 0  Instance: /tb_crc_8
+# ** Note: resultat obtenu : 0x1C
+#    Time: 2210 ns  Iteration: 0  Instance: /tb_crc_8
+# ** Note: Test 3
+#    Time: 2610 ns  Iteration: 0  Instance: /tb_crc_8
+# ** Warning: CRC not OK
+#    Time: 3470 ns  Iteration: 0  Instance: /tb_crc_8
+# ** Note: resultat attendu : 0x09
+#    Time: 3470 ns  Iteration: 0  Instance: /tb_crc_8
+# ** Note: resultat obtenu : 0x12
+#    Time: 3470 ns  Iteration: 0  Instance: /tb_crc_8
+# ** Note: Test 4
+#    Time: 3870 ns  Iteration: 0  Instance: /tb_crc_8
+# ** Warning: CRC OK
+#    Time: 4730 ns  Iteration: 0  Instance: /tb_crc_8
+# ** Note: resultat obtenu : 0x00
+#    Time: 4730 ns  Iteration: 0  Instance: /tb_crc_8
+# ** Note: Test 5
+#    Time: 5130 ns  Iteration: 0  Instance: /tb_crc_8
+# ** Warning: CRC not OK
+#    Time: 5990 ns  Iteration: 0  Instance: /tb_crc_8
+# ** Note: resultat attendu : 0xF8
+#    Time: 5990 ns  Iteration: 0  Instance: /tb_crc_8
+# ** Note: resultat obtenu : 0xF7
+#    Time: 5990 ns  Iteration: 0  Instance: /tb_crc_8
+# End time: 21:08:00 on Sep 27,2023, Elapsed time: 0:51:15
+# Errors: 0, Warnings: 5

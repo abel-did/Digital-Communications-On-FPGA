@@ -1,0 +1,39 @@
+# //  Questa Sim-64
+# //  Version 2022.2 linux_x86_64 Apr 25 2022
+# //
+# //  Copyright 1991-2022 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do {tb_crc_8_simulate.do}
+# vsim -lib xil_defaultlib tb_crc_8_opt 
+# Start time: 17:26:19 on Sep 23,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_crc_8(tesbench)#1
+# Loading work.crc_8(rtl)#1
+# 1
+# 1
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: Test 1
+#    Time: 100 ns  Iteration: 0  Instance: /tb_crc_8
+# ** Warning: CRC OK
+#    Time: 950 ns  Iteration: 0  Instance: /tb_crc_8
+# ** Note: resultat obtenu : 0x07
+#    Time: 950 ns  Iteration: 0  Instance: /tb_crc_8
+run 1 us
+# ** Note: Test 2
+#    Time: 1350 ns  Iteration: 0  Instance: /tb_crc_8
+exit
+# End time: 17:27:02 on Sep 23,2023, Elapsed time: 0:00:43
+# Errors: 0, Warnings: 1

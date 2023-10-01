@@ -1,0 +1,22 @@
+QuestaSim-64 vopt 2022.2 Compiler 2022.04 Apr 25 2022
+** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+Start time: 17:25:53 on Sep 23,2023
+vopt "+acc=npr" -suppress 10016 -L xil_defaultlib -L secureip -work xil_defaultlib xil_defaultlib.tb_crc_8 -o tb_crc_8_opt 
+
+Top level modules:
+	tb_crc_8
+
+Analyzing design...
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading entity tb_crc_8
+-- Loading architecture tesbench of tb_crc_8
+-- Loading entity crc_8
+-- Loading architecture rtl of crc_8
+Optimizing 2 design-units (inlining 0/2 architecture instances):
+-- Optimizing architecture tesbench of tb_crc_8
+-- Optimizing architecture rtl of crc_8
+Optimized design name is tb_crc_8_opt
+End time: 17:25:56 on Sep 23,2023, Elapsed time: 0:00:03
+Errors: 0, Warnings: 1

@@ -1,0 +1,335 @@
+/*
+
+Xilinx Vivado v2022.1 (64-bit) [Major: 2022, Minor: 1]
+SW Build: 3526262 on Mon Apr 18 15:47:01 MDT 2022
+IP Build: 3524634 on Mon Apr 18 20:55:01 MDT 2022
+
+Process ID (PID): 12585
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Wed Sep 27 13:29:34 CEST 2023
+Time zone: 	Central European Standard Time (Europe/Paris)
+
+OS: PRETTY_NAME="Debian GNU/Linux 11 (bullseye)"
+OS Version: 5.10.0-25-amd64
+OS Architecture: amd64
+Available processors (cores): 8
+
+Display: 2.0
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.11 64-bit
+Java home: 	/nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/tps/lnx64/jre11.0.11_9
+Java executable: 	/nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/tps/lnx64/jre11.0.11_9/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Djdk.gtk.version=2, -Dsun.java2d.uiScale.enabled=false, -Xverify:none, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, --add-opens=java.desktop/com.sun.awt=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=60m, -XX:MaxNewSize=60m, -Xms256m, -Xmx3072m, -Xss5m, -Xrs]
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	didouha
+User home directory: /user/didouha
+User working directory: /user/didouha/homedir/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_SANS_AMELIORATION/impl
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado
+HDI_APPROOT: /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1
+RDI_DATADIR: /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data
+RDI_BINDIR: /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/bin
+
+Vivado preferences file: /user/didouha/.Xilinx/Vivado/2022.1/vivado.xml
+Vivado preferences directory: /user/didouha/.Xilinx/Vivado/2022.1/
+Vivado layouts directory: /user/didouha/.Xilinx/Vivado/2022.1/data/layouts
+PlanAhead jar file: 	/nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/lib/classes/planAhead.jar
+Vivado log file: 	/user/didouha/homedir/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_SANS_AMELIORATION/impl/vivado.log
+Vivado journal file: 	/user/didouha/homedir/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_SANS_AMELIORATION/impl/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-12585-pc3454a
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/ids_lite/ISE
+XILINX_DSP: /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/ids_lite/ISE
+XILINX_HLS: /nfs/opt/eda/tools/amd/vitis-2022.1/Vitis_HLS/2022.1
+XILINX_PLANAHEAD: /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1
+XILINX_SDK: /nfs/opt/eda/tools/amd/vitis-2022.1/Vitis/2022.1
+XILINX_VITIS: /nfs/opt/eda/tools/amd/vitis-2022.1/Vitis/2022.1
+XILINX_VIVADO: /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1
+XILINX_VIVADO_HLS: /nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,738 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: MSGMGR_REFRESH_MSG
+// Tcl Message: start_gui 
+// Tcl Message: Sourcing tcl script '/nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/scripts/Vivado_init.tcl' 
+// Tcl Message: ESIEE Paris custom init (/nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/scripts/Vivado_init.tcl) (others ESIEE custom config in : ~/.Xilinx/Vivado/2022.1/vivado.ini)  * Checking LANG, result should be en_US.UTF-8 : result=en_US.UTF-8  * Raising 'multi-driven net on pin' (critical warning) severity to error 
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,738 MB. GUI used memory: 56 MB. Current time: 9/27/23, 1:29:35 PM CEST
+selectButton(PAResourceEtoH.GettingStartedView_OPEN_PROJECT, "Open Project"); // y
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+setFileChooser("/user/didouha/homedir/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_SANS_AMELIORATION/impl/project_crc_v1/project_crc_v1.xpr");
+// [GUI Memory]: 109 MB (+111486kb) [00:00:48]
+// [Engine Memory]: 1,751 MB (+1684339kb) [00:00:48]
+// Opening Vivado Project: /user/didouha/homedir/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_SANS_AMELIORATION/impl/project_crc_v1/project_crc_v1.xpr. Version: Vivado v2022.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project /user/didouha/homedir/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_SANS_AMELIORATION/impl/project_crc_v1/project_crc_v1.xpr 
+// TclEventType: FLOW_ADDED
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: MSGMGR_REFRESH_MSG
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project /user/didouha/homedir/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_SANS_AMELIORATION/impl/project_crc_v1/project_crc_v1.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from '/user/didouha/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_SANS_AMELIORATION/impl/project_crc_v1' since last save. INFO: [filemgmt 56-2] Default IP Output Path : Could not find the directory '/user/didouha/homedir/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_SANS_AMELIORATION/impl/project_crc_v1/project_crc_v1.gen/sources_1', nor could it be found using path '/user/didouha/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_SANS_AMELIORATION/impl/project_crc_v1/project_crc_v1.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,760 MB. GUI used memory: 96 MB. Current time: 9/27/23, 1:30:11 PM CEST
+// TclEventType: PROJECT_NEW
+// WARNING: HEventQueue.dispatchEvent() is taking  7576 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/data/ip'. 
+// WARNING: HEventQueue.dispatchEvent() is taking  1375 ms.
+// [GUI Memory]: 130 MB (+16383kb) [00:01:34]
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 2371 ms. Increasing delay to 3000 ms.
+// Project name: project_crc_v1; location: /user/didouha/homedir/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_SANS_AMELIORATION/impl/project_crc_v1; part: xc7a35tcpg236-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:26 ; elapsed = 00:00:51 . Memory (MB): peak = 7529.199 ; gain = 46.355 ; free physical = 164 ; free virtual = 12102 
+// Elapsed time: 51 seconds
+dismissDialog("Open Project"); // bA
+// HMemoryUtils.trashcanNow. Engine heap size: 1,831 MB. GUI used memory: 67 MB. Current time: 9/27/23, 1:30:35 PM CEST
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 17 seconds
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12); // n
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12); // n
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 15, false); // n
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Elaborate Design"); // A
+// Tcl Message: synth_design -rtl -rtl_skip_mlo -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -rtl_skip_mlo -name rtl_1 Starting synth_design Using part: xc7a35tcpg236-1 Top: crc_8 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,834 MB. GUI used memory: 89 MB. Current time: 9/27/23, 1:31:23 PM CEST
+// TclEventType: ELABORATE_START
+// HMemoryUtils.trashcanNow. Engine heap size: 1,968 MB. GUI used memory: 67 MB. Current time: 9/27/23, 1:31:40 PM CEST
+// TclEventType: ELABORATE_FINISH
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,108 MB. GUI used memory: 67 MB. Current time: 9/27/23, 1:31:44 PM CEST
+// [Engine Memory]: 2,109 MB (+284228kb) [00:02:52]
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// WARNING: HEventQueue.dispatchEvent() is taking  2578 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: INFO: [Device 21-403] Loading part xc7a35tcpg236-1 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 7612.020 ; gain = 64.812 ; free physical = 126 ; free virtual = 11415 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: INFO: [Synth 8-638] synthesizing module 'crc_8' [/user/didouha/homedir/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_SANS_AMELIORATION/rtl/crc_8.vhd:37] INFO: [Synth 8-256] done synthesizing module 'crc_8' (0#1) [/user/didouha/homedir/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_SANS_AMELIORATION/rtl/crc_8.vhd:37] 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 7680.988 ; gain = 133.781 ; free physical = 295 ; free virtual = 11489 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: --------------------------------------------------------------------------------- Start Handling Custom Attributes --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 7689.895 ; gain = 142.688 ; free physical = 293 ; free virtual = 11487 
+// Tcl Message: --------------------------------------------------------------------------------- --------------------------------------------------------------------------------- 
+// Tcl Message: Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 7689.895 ; gain = 142.688 ; free physical = 293 ; free virtual = 11487 
+// Tcl Message: --------------------------------------------------------------------------------- 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7689.895 ; gain = 0.000 ; free physical = 284 ; free virtual = 11479 
+// Tcl Message: INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message:  Processing XDC Constraints Initializing timing engine Parsing XDC File [/user/didouha/homedir/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_SANS_AMELIORATION/impl/basys3.xdc] Finished Parsing XDC File [/user/didouha/homedir/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_SANS_AMELIORATION/impl/basys3.xdc] Completed Processing XDC Constraints  
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7821.645 ; gain = 0.000 ; free physical = 188 ; free virtual = 11400 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Tcl Message: RTL Elaboration Complete:  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 7872.191 ; gain = 324.984 ; free physical = 136 ; free virtual = 11330 
+// Tcl Message: 5 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered. synth_design completed successfully 
+// Tcl Message: synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:55 . Memory (MB): peak = 7872.191 ; gain = 326.980 ; free physical = 136 ; free virtual = 11330 
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Elapsed time: 55 seconds
+dismissDialog("Open Elaborated Design"); // bA
+// [GUI Memory]: 140 MB (+4366kb) [00:03:38]
+// [GUI Memory]: 152 MB (+4772kb) [00:03:39]
+// Elapsed time: 44 seconds
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 19); // n
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 19); // n
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Schematic]", 31, false); // n
+// Tcl Message: open_run synth_1 -name synth_1 
+// Tcl Message: Design is defaulting to impl run constrset: constrs_1 Design is defaulting to synth run part: xc7a35tcpg236-1 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: POWER_CNS_STALE
+// TclEventType: POWER_REPORT_STALE
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,237 MB. GUI used memory: 95 MB. Current time: 9/27/23, 1:32:36 PM CEST
+// [Engine Memory]: 2,295 MB (+83985kb) [00:03:43]
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// DeviceView Instantiated
+// WARNING: HEventQueue.dispatchEvent() is taking  1072 ms.
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7872.191 ; gain = 0.000 ; free physical = 137 ; free virtual = 11314 
+// Tcl Message: INFO: [Project 1-479] Netlist was created with Vivado 2022.1 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Parsing XDC File [/user/didouha/homedir/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_SANS_AMELIORATION/impl/basys3.xdc] Finished Parsing XDC File [/user/didouha/homedir/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_SANS_AMELIORATION/impl/basys3.xdc] 
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7938.688 ; gain = 0.000 ; free physical = 135 ; free virtual = 11240 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Device view-level: 0.0
+// [GUI Memory]: 161 MB (+1643kb) [00:03:45]
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+dismissDialog("Open Synthesized Design"); // bA
+// [Engine Memory]: 2,453 MB (+45092kb) [00:03:52]
+// RouteApi::initDelayMediator elapsed time: 7.7s
+// [Engine Memory]: 2,669 MB (+98165kb) [00:03:52]
+// RouteApi: Init Delay Mediator Swing Worker Finished
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Open Implemented Design]", 34); // n
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Open Implemented Design]", 34); // n
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Open Implemented Design, Schematic]", 45, false); // n
+// Tcl Message: open_run impl_1 
+// TclEventType: SDC_CONSTRAINT_ADD
+// TclEventType: POWER_CNS_STALE
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,883 MB. GUI used memory: 105 MB. Current time: 9/27/23, 1:32:54 PM CEST
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// [Engine Memory]: 2,934 MB (+137428kb) [00:04:02]
+// TclEventType: DESIGN_NEW
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8389.746 ; gain = 0.000 ; free physical = 122 ; free virtual = 10828 
+// Tcl Message: INFO: [Project 1-479] Netlist was created with Vivado 2022.1 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Project 1-853] Binary constraint restore complete. 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF Files: Time (s): cpu = 00:00:00.1 ; elapsed = 00:00:00.93 . Memory (MB): peak = 8585.750 ; gain = 0.000 ; free physical = 362 ; free virtual = 10868 
+// Tcl Message: Restored from archive | CPU: 0.170000 secs | Memory: 0.039429 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.1 ; elapsed = 00:00:00.94 . Memory (MB): peak = 8585.750 ; gain = 0.000 ; free physical = 362 ; free virtual = 10868 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8585.750 ; gain = 0.000 ; free physical = 370 ; free virtual = 10876 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Tcl Message: open_run: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 8686.348 ; gain = 308.508 ; free physical = 317 ; free virtual = 10824 
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// TclEventType: TIMING_SUMMARY_UPDATED
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+dismissDialog("Open Implemented Design"); // bA
+// [GUI Memory]: 172 MB (+2365kb) [00:04:10]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Open Implemented Design, Schematic]", 45, false); // n
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Elapsed time: 1165 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Device", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic (2)", 3); // m
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // f
+// [GUI Memory]: 182 MB (+1681kb) [00:23:41]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 16, false); // n
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 16, false); // n
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 16, false, false, false, false, false, true); // n - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic (2)", 2); // m
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // f
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 2); // m
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // f
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 16, false); // n
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Elapsed time: 21 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Schematic]", 31, false); // n
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Elapsed time: 60 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Open Implemented Design, Schematic]", 45, false); // n
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Elapsed time: 20 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 16, false); // n
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Elapsed time: 21 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Schematic]", 31, false); // n
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Elapsed time: 40 seconds
+selectButton(PAResourceItoN.NetlistSchematicView_SHOW_CELLS_IN_THIS_SCHEMATIC, "30 Cells"); // g
+// Elapsed time: 17 seconds
+selectButton(PAResourceItoN.NetlistSchematicView_SHOW_NETS_IN_THIS_SCHEMATIC, "35 Nets"); // g
+// Elapsed time: 17 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 16, false); // n
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Elapsed time: 49 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Schematic]", 31, false); // n
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Elapsed time: 94 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic (2)", 3); // m
+// [GUI Memory]: 193 MB (+1976kb) [00:29:40]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic (2)", 3); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic (3)", 4); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Device", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 2); // m
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // f
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic (2)", 2, false, true); // m - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // F
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic (2)", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic (3)", 3); // m
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // f
+// Device view-level: 0.3
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 48); // n
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 48); // n
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Open Implemented Design, Schematic]", 45, false); // n
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Elapsed time: 182 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 16, false); // n
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Elapsed time: 29 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Schematic]", 31, false); // n
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Device view-level: 0.0
+// HMemoryUtils.trashcanNow. Engine heap size: 2,975 MB. GUI used memory: 177 MB. Current time: 9/27/23, 2:02:35 PM CEST
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 16, false); // n
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Elapsed time: 185 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic (3)", 3); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic (2)", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic", 1); // m
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // f
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Schematic (2)", 1, false, true); // m - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // F
+closeView(PAResourceOtoP.PAViews_SCHEMATIC, "Schematic"); // f
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Schematic]", 31, false); // n
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Elapsed time: 494 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design, Schematic]", 16, false); // n
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC

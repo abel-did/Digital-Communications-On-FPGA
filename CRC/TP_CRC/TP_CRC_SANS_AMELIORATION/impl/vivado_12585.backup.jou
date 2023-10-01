@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Wed Sep 27 13:23:30 2023
+# Process ID: 12585
+# Current directory: /user/didouha/homedir/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_SANS_AMELIORATION/impl
+# Command line: vivado
+# Log file: /user/didouha/homedir/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_SANS_AMELIORATION/impl/vivado.log
+# Journal file: /user/didouha/homedir/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_SANS_AMELIORATION/impl/vivado.jou
+# Running On: pc3454a, OS: Linux, CPU Frequency: 1596.404 MHz, CPU Physical cores: 4, Host memory: 8004 MB
+#-----------------------------------------------------------
+start_gui
+open_project /user/didouha/homedir/E4/P1/SEI_4101A/TP_CRC/TP_CRC/TP_CRC_SANS_AMELIORATION/impl/project_crc_v1/project_crc_v1.xpr
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+open_run synth_1 -name synth_1
+open_run impl_1
