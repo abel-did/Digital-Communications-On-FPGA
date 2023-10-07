@@ -71,6 +71,21 @@ begin
 	-- Memorisation 
 	process(clk, resetn)
 	begin 
-		if
+		if resetn = '0' then
+		elsif rising_edge(clk) then
+		end if;
+	end process;
+
+	-- Registre ACK
+	---------------
+	-- Mise a zero
+	-- Mise a un
+	-- Memorisation
+	process(clk, resetn)
+	begin
+		if resetn = '0' then
+		elsif rising_edge(clk) then
+		end if;
+	end process;
 
 end architecture;
