@@ -15,7 +15,9 @@ port (
 	wr			:   in std_logic;
 	addr_slave  :   in std_logic_vector(7 downto 0);
 	data_mosi	:   in std_logic_vector(8*N_byte downto 0);
-	data_miso	: 	out std_logic_vector(8*N_byte downto 0)
+	data_miso	: 	out std_logic_vector(8*N_byte downto 0);
+	error_i2c	:   out std_logic;
+	update_miso :   out std_logic
 );
 end entity;
 --------------------------------------------------------------------------
