@@ -88,4 +88,37 @@ begin
 		end if;
 	end process;
 
+	-- CTR TEMPO
+	------------
+	process(clk, resetn) 
+	begin
+		if resetn = '0' then
+		elsif rising_edge(clk) then
+		end if;
+	end process;
+
+	-- CTR BIT
+	----------
+	-- Mise a zero 
+	-- Incrementation
+	-- Memorisation
+	process(clk, resetn)
+	begin
+		if resetn = '0' then
+		elsif rising_edge(clk) then
+		end if;
+	end process;
+
+	-- CTR BYTE
+	-----------
+	-- Mise a zero
+	-- Incrementation
+	-- Memorisation
+	process(clk, resetn)
+	begin
+		if resetn = '0' then
+		elsif rising_edge(clk) then
+		end if;
+	end process;
+
 end architecture;
