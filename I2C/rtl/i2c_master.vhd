@@ -17,14 +17,33 @@ port (
 	data_mosi	:   in std_logic_vector(8*N_byte downto 0);
 	data_miso	: 	out std_logic_vector(8*N_byte downto 0);
 	error_i2c	:   out std_logic;
-	update_miso :   out std_logic
+	update_miso :   out std_logic;
+	i2c_SCL		:   out std_logic;
+	
 );
 end entity;
 --------------------------------------------------------------------------
 architecture rtl of i2c_master is
+	constant number_byte : natural := integer(8*(N_byte + 1));
+
 	type state is (idle, sa0, sa1, d0, d1, ak0, ak1, so0, so1);
 	signal current_state : state;
 	signal next_state    : state;
+
+	signal cmd_reg_data 		: std_logic_vector(1 downto 0);
+	signal data_miso 			: std_logic_vector(number_byte downto 0);
+	signal addr_wr_data_mosi 	: std_logic_vector(number_byte downto 0);
+
+	signal reg_wr 				: std_logic;
+
+	signal reg_ack 				: std_logic;
+	signal error_i2c 			: std_logic;
+
+	signal end_tempo 			: std_logic;
+
+	signal end_bit 				: std_logic;
+
+	signal end_byte 			: std_logic;
 begin
 --------------------------------------------------------------------------
 --	Control Part														--
@@ -57,20 +76,24 @@ begin
 --------------------------------------------------------------------------
 	-- Registre Data
 	----------------
-	-- Chargement parallele
-	-- Decalage de 1 bit à gauche
-	-- Memorisation
+	-- Chargement parallele			00
+	-- Decalage de 1 bit à gauche	01
+	-- Memorisation					10 / 11
 	process(clk, resetn)
 	begin
 		if resetn = '0' then
 		elsif rising_edge(clk) then
+			case cmd_reg_data is 
+				when "00" 			=> data_miso <= addr_slave(7 downto 0) & wr & data_mosi;
+				when "01" 			=> 
+			end case;
 		end if;
 	end process;
 	
 	-- Registre WR 
 	--------------
-	-- Chargement parallele
-	-- Memorisation 
+	-- Chargement parallele			0
+	-- Memorisation 				1
 	process(clk, resetn)
 	begin 
 		if resetn = '0' then
@@ -80,9 +103,9 @@ begin
 
 	-- Registre ACK
 	---------------
-	-- Mise a zero
-	-- Mise a un
-	-- Memorisation
+	-- Mise a zero					00
+	-- Mise a un					01	
+	-- Memorisation					10 / 11
 	process(clk, resetn)
 	begin
 		if resetn = '0' then
@@ -101,9 +124,9 @@ begin
 
 	-- CTR BIT
 	----------
-	-- Mise a zero 
-	-- Incrementation
-	-- Memorisation
+	-- Mise a zero 					00
+	-- Incrementation				01
+	-- Memorisation					10 / 11
 	process(clk, resetn)
 	begin
 		if resetn = '0' then
@@ -113,9 +136,9 @@ begin
 
 	-- CTR BYTE
 	-----------
-	-- Mise a zero
-	-- Incrementation
-	-- Memorisation
+	-- Mise a zero					00
+	-- Incrementation				01
+	-- Memorisation					10 / 11
 	process(clk, resetn)
 	begin
 		if resetn = '0' then
