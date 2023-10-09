@@ -70,12 +70,12 @@ begin
 	begin
 		case current_state is 
 			
-			cmd_reg_data 	<= "00";
-			cmd_reg_wr   	<= '0';
-			cmd_reg_ack  	<= "01";
-			cmd_ctr_tempo 	<=;
-			cmd_ctr_bit  	<= "00";
-			cmd_ctr_byte 	<= "00";
+			cmd_reg_data 	<= "11";	-- Memorisation 
+			cmd_reg_wr   	<= '1';		-- Memorisation
+			cmd_reg_ack  	<= "01";	-- Memorisation
+			cmd_ctr_tempo 	<=     ;	-- Mise a 0
+			cmd_ctr_bit  	<= "00";	-- Mise a 0
+			cmd_ctr_byte 	<= "00";	-- Mise a 0
 			scl 		 	<= '1';
 			sdo			 	<= '1';
 			ready 		 	<= '1';
@@ -83,9 +83,19 @@ begin
 
 			when idle =>
 				if start then
+					cmd_reg_data 	<= "00";	-- Chargement parallele
+					cmd_reg_wr   	<= '0';		-- Chargement 
+					cmd_reg_ack  	<= "01";	-- Mise a un
 					next_state <= sa0;
 				end if;
-					
+
+				cmd_ctr_tempo 	<=     ; 		-- Mise a 0
+				cmd_ctr_bit  	<= "00";		-- Mise a 0
+				cmd_ctr_byte 	<= "00";		-- Mise a 0
+				scl 		 	<= '1';
+				sdo			 	<= '1';
+				ready 		 	<= '1';
+				update 	     	<= '0';
 
 			when sa0  =>
 			when sa1  =>
