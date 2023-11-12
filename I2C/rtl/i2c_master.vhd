@@ -19,7 +19,7 @@ port (
 	error_i2c	:   out std_logic;
 	update_miso :   out std_logic;
 	i2c_SCL		:   out std_logic;
-	
+	i2c_SDA		:   inout std_logic
 );
 end entity;
 --------------------------------------------------------------------------
@@ -34,16 +34,25 @@ architecture rtl of i2c_master is
 	signal data_miso 			: std_logic_vector(number_byte downto 0);
 	signal addr_wr_data_mosi 	: std_logic_vector(number_byte downto 0);
 
+	signal cmd_reg_wr 			: std_logic;
 	signal reg_wr 				: std_logic;
 
+	signal cmd_reg_ack			: std_logic_vector(1 downto 0);
 	signal reg_ack 				: std_logic;
 	signal error_i2c 			: std_logic;
 
+	signal cmd_ctr_tempo 		: 
 	signal end_tempo 			: std_logic;
 
+	signal cmd_ctr_bit 			: std_logic_vector(1 downto 0);
 	signal end_bit 				: std_logic;
 
+	signal cmd_ctr_byte 		: std_logic_vector(1 downto 0);
 	signal end_byte 			: std_logic;
+
+	signal scl 					: std_logic;
+	signal sco					: std_logic;
+
 begin
 --------------------------------------------------------------------------
 --	Control Part														--
@@ -60,7 +69,34 @@ begin
 	process(current_state, start, end_tempo, end_bit, end_byte) is
 	begin
 		case current_state is 
+			
+			cmd_reg_data 	<= "11";	-- Memorisation 
+			cmd_reg_wr   	<= '1';		-- Memorisation
+			cmd_reg_ack  	<= "01";	-- Memorisation
+			cmd_ctr_tempo 	<=     ;	-- Mise a 0
+			cmd_ctr_bit  	<= "00";	-- Mise a 0
+			cmd_ctr_byte 	<= "00";	-- Mise a 0
+			scl 		 	<= '1';
+			sdo			 	<= '1';
+			ready 		 	<= '1';
+			update 	     	<= '0';
+
 			when idle =>
+				if start then
+					cmd_reg_data 	<= "00";	-- Chargement parallele
+					cmd_reg_wr   	<= '0';		-- Chargement 
+					cmd_reg_ack  	<= "01";	-- Mise a un
+					next_state <= sa0;
+				end if;
+
+				cmd_ctr_tempo 	<=     ; 		-- Mise a 0
+				cmd_ctr_bit  	<= "00";		-- Mise a 0
+				cmd_ctr_byte 	<= "00";		-- Mise a 0
+				scl 		 	<= '1';
+				sdo			 	<= '1';
+				ready 		 	<= '1';
+				update 	     	<= '0';
+
 			when sa0  =>
 			when sa1  =>
 			when d0   =>
@@ -86,6 +122,7 @@ begin
 			case cmd_reg_data is 
 				when "00" 			=> data_miso <= addr_slave(7 downto 0) & wr & data_mosi;
 				when "01" 			=> 
+				when others 		=> data_miso <= data_miso;
 			end case;
 		end if;
 	end process;
@@ -98,6 +135,10 @@ begin
 	begin 
 		if resetn = '0' then
 		elsif rising_edge(clk) then
+			case cmd_reg_wr is 
+				when '0'			=> reg_wr <= wr;
+				when others 		=> reg_wr <= reg_wr;
+			end case;
 		end if;
 	end process;
 
@@ -110,8 +151,15 @@ begin
 	begin
 		if resetn = '0' then
 		elsif rising_edge(clk) then
+			case cmd_reg_ack is
+				when "00" 			=> reg_ack <= '0';
+				when "01" 			=> reg_ack <= '1';
+				when others 		=> reg_ack <= reg_ack;
+			end case;
 		end if;
 	end process;
+
+	error_i2c <= not reg_ack;
 
 	-- CTR TEMPO
 	------------
@@ -119,6 +167,8 @@ begin
 	begin
 		if resetn = '0' then
 		elsif rising_edge(clk) then
+			case cmd_ctr_tempo is
+			end case;
 		end if;
 	end process;
 
@@ -131,6 +181,11 @@ begin
 	begin
 		if resetn = '0' then
 		elsif rising_edge(clk) then
+			case cmd_ctr_bit is
+				when "00" 			=> ctr_bit <= 
+				when "01"			=> ctr_bit <=
+				when others 		=> ctr_bit <= 
+			end case;
 		end if;
 	end process;
 
@@ -143,6 +198,8 @@ begin
 	begin
 		if resetn = '0' then
 		elsif rising_edge(clk) then
+			case cmd_ctr_byte is
+			end case;
 		end if;
 	end process;
 
