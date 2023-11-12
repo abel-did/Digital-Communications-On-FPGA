@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Oct 19 15:18:49 2023
+# Process ID: 5175
+# Current directory: /user/didouha/E4/P1/SEI_4101A/TP_SPI/TP_SPI/tp_spi/pmod_ad1/impl/project_spi/project_spi.runs/synth_1
+# Command line: vivado -log demo_pmod_ad1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source demo_pmod_ad1.tcl
+# Log file: /user/didouha/E4/P1/SEI_4101A/TP_SPI/TP_SPI/tp_spi/pmod_ad1/impl/project_spi/project_spi.runs/synth_1/demo_pmod_ad1.vds
+# Journal file: /user/didouha/E4/P1/SEI_4101A/TP_SPI/TP_SPI/tp_spi/pmod_ad1/impl/project_spi/project_spi.runs/synth_1/vivado.jou
+# Running On: pc3401e, OS: Linux, CPU Frequency: 3085.773 MHz, CPU Physical cores: 8, Host memory: 16538 MB
+#-----------------------------------------------------------
+source demo_pmod_ad1.tcl -notrace

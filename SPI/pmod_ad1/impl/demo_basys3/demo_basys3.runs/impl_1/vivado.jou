@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Aug 17 12:56:19 2022
+# Process ID: 22697
+# Current directory: /media/sf_ESIEE/enseignement/2022_2023/sei_4101a/td_tp_spi/tp_spi/pmod_ad1/impl/demo_basys3/demo_basys3.runs/impl_1
+# Command line: vivado -log demo_pmod_ad1.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source demo_pmod_ad1.tcl -notrace
+# Log file: /media/sf_ESIEE/enseignement/2022_2023/sei_4101a/td_tp_spi/tp_spi/pmod_ad1/impl/demo_basys3/demo_basys3.runs/impl_1/demo_pmod_ad1.vdi
+# Journal file: /media/sf_ESIEE/enseignement/2022_2023/sei_4101a/td_tp_spi/tp_spi/pmod_ad1/impl/demo_basys3/demo_basys3.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source demo_pmod_ad1.tcl -notrace

@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Oct 23 13:02:59 2023
+# Process ID: 52897
+# Current directory: /user/didouha/E4/P1/SEI_4101A/TP_SPI/TP_SPI/tp_spi/pmod_ad1
+# Command line: vivado
+# Log file: /user/didouha/E4/P1/SEI_4101A/TP_SPI/TP_SPI/tp_spi/pmod_ad1/vivado.log
+# Journal file: /user/didouha/E4/P1/SEI_4101A/TP_SPI/TP_SPI/tp_spi/pmod_ad1/vivado.jou
+# Running On: pc3401g, OS: Linux, CPU Frequency: 1103.494 MHz, CPU Physical cores: 8, Host memory: 16538 MB
+#-----------------------------------------------------------
+start_gui
+open_project /user/didouha/E4/P1/SEI_4101A/TP_SPI/TP_SPI/tp_spi/pmod_ad1/impl/project_spi/project_spi.xpr
+update_compile_order -fileset sources_1

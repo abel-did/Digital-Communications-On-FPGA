@@ -1,0 +1,110 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+!s11e vcom 2022.2 2022.04, Apr 25 2022
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/user/didouha/E4/P1/SEI_4101A/TP_SPI/TP_SPI_KHAZAAL_DIDOUH/pmod_ad1/tb
+T_opt
+!s110 1698090140
+V]LD[<adJ`So4`;@97kV9C1
+04 15 9 work tb_spi_pmod_ad1 testbench 1
+=1-000ae431a4f1-6536cc9b-4b7c-dfb
+R0
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc
+tCvgOpt 0
+n@_opt
+OL;O;2022.2;75
+Espi_pmod_ad1
+Z2 w1697615947
+Z3 DPx4 ieee 9 math_real 0 22 :8NNHF3SFI6^on5?4X[S`1
+Z4 DPx4 ieee 11 numeric_std 0 22 F8@]:i<mFK7<TjIzKcTGi0
+Z5 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z6 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+!i122 0
+R1
+Z7 8../rtl/spi_pmod_ad1.vhd
+Z8 F../rtl/spi_pmod_ad1.vhd
+l0
+L38 1
+V]IlQ]C?FkWBKKMb`_4[b83
+!s100 oU`mJ<U0M]_6iPBQ1[B>m2
+Z9 OL;C;2022.2;75
+32
+Z10 !s110 1698090138
+!i10b 1
+Z11 !s108 1698090137.000000
+Z12 !s90 -reportprogress|300|../rtl/spi_pmod_ad1.vhd|
+Z13 !s107 ../rtl/spi_pmod_ad1.vhd|
+!i113 0
+Z14 tExplicit 1 CvgOpt 0
+Artl
+R3
+R4
+R5
+R6
+Z15 DEx4 work 12 spi_pmod_ad1 0 22 ]IlQ]C?FkWBKKMb`_4[b83
+!i122 0
+l85
+L59 287
+Vb_RG@Jz0?fA6mgIUc24L[3
+!s100 TNz>@J@G5K4Q_?BP@BmIQ2
+R9
+32
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+Etb_spi_pmod_ad1
+Z16 w1697237442
+R5
+R6
+!i122 1
+R1
+Z17 8tb_spi_pmod_ad1.vhd
+Z18 Ftb_spi_pmod_ad1.vhd
+l0
+L7 1
+Vz`ZAc7Yg>IA=1FNT24<ZX1
+!s100 :<5NO<AYX^kiH;Z`KY^bn1
+R9
+33
+R10
+!i10b 1
+Z19 !s108 1698090138.000000
+Z20 !s90 -reportprogress|300|-2008|tb_spi_pmod_ad1.vhd|
+Z21 !s107 tb_spi_pmod_ad1.vhd|
+!i113 0
+Z22 o-2008
+R14
+Atestbench
+R3
+R4
+R15
+R5
+R6
+DEx4 work 15 tb_spi_pmod_ad1 0 22 z`ZAc7Yg>IA=1FNT24<ZX1
+!i122 1
+l39
+L10 135
+V9Of`n:@C>mSY3AmQjUU@d0
+!s100 jl20UX2h1L;d7hFz=XA3N1
+R9
+33
+R10
+!i10b 1
+R19
+R20
+R21
+!i113 0
+R22
+R14

@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Oct 19 18:41:23 2023
+# Process ID: 34895
+# Current directory: /user/didouha/E4/P1/SEI_4101A/TP_SPI/TP_SPI/tp_spi/pmod_ad1/impl
+# Command line: vivado
+# Log file: /user/didouha/E4/P1/SEI_4101A/TP_SPI/TP_SPI/tp_spi/pmod_ad1/impl/vivado.log
+# Journal file: /user/didouha/E4/P1/SEI_4101A/TP_SPI/TP_SPI/tp_spi/pmod_ad1/impl/vivado.jou
+# Running On: pc3401e, OS: Linux, CPU Frequency: 2646.246 MHz, CPU Physical cores: 8, Host memory: 16538 MB
+#-----------------------------------------------------------
+start_gui
+open_project /user/didouha/E4/P1/SEI_4101A/TP_SPI/TP_SPI/tp_spi/pmod_ad1/impl/project_spi/project_spi.xpr
+update_compile_order -fileset sources_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {/user/didouha/E4/P1/SEI_4101A/TP_SPI/TP_SPI/tp_spi/pmod_ad1/impl/project_spi/project_spi.runs/impl_1/demo_pmod_ad1.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/user/didouha/E4/P1/SEI_4101A/TP_SPI/TP_SPI/tp_spi/pmod_ad1/impl/project_spi/project_spi.runs/impl_1/demo_pmod_ad1.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]

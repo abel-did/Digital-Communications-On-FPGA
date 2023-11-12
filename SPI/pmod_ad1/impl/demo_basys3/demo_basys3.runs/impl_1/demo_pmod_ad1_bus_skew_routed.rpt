@@ -1,0 +1,15 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+| Date         : Wed Aug 17 12:57:07 2022
+| Host         : debian10xilinx running 64-bit Debian GNU/Linux 10 (buster)
+| Command      : report_bus_skew -warn_on_violation -file demo_pmod_ad1_bus_skew_routed.rpt -pb demo_pmod_ad1_bus_skew_routed.pb -rpx demo_pmod_ad1_bus_skew_routed.rpx
+| Design       : demo_pmod_ad1
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+No bus skew constraints
+
