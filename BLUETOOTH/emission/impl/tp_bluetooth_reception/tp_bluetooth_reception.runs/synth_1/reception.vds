@@ -1,0 +1,422 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Fri Nov  3 14:01:10 2023
+# Process ID: 18423
+# Current directory: /user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/emission/impl/tp_bluetooth_reception/tp_bluetooth_reception.runs/synth_1
+# Command line: vivado -log reception.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source reception.tcl
+# Log file: /user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/emission/impl/tp_bluetooth_reception/tp_bluetooth_reception.runs/synth_1/reception.vds
+# Journal file: /user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/emission/impl/tp_bluetooth_reception/tp_bluetooth_reception.runs/synth_1/vivado.jou
+# Running On: pc3407i, OS: Linux, CPU Frequency: 1100.158 MHz, CPU Physical cores: 8, Host memory: 16538 MB
+#-----------------------------------------------------------
+Sourcing tcl script '/nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/scripts/Vivado_init.tcl'
+ESIEE Paris custom init
+(/nfs/opt/eda/tools/amd/vitis-2022.1/Vivado/2022.1/scripts/Vivado_init.tcl)
+(others ESIEE custom config in : ~/.Xilinx/Vivado/2022.1/vivado.ini)
+ * Checking LANG, result should be en_US.UTF-8 : result=en_US.UTF-8
+ * Raising 'multi-driven net on pin' (critical warning) severity to error
+source reception.tcl -notrace
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {Synth 8-6859}  -new_severity {ERROR} '. The existing rule will be replaced.
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2579.098 ; gain = 0.023 ; free physical = 8854 ; free virtual = 20345
+Command: read_checkpoint -auto_incremental -incremental /user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/emission/impl/tp_bluetooth_reception/tp_bluetooth_reception.srcs/utils_1/imports/synth_1/reception.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/emission/impl/tp_bluetooth_reception/tp_bluetooth_reception.srcs/utils_1/imports/synth_1/reception.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top reception -part xc7a35tcpg236-1 -debug_log
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 18479
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2579.305 ; gain = 0.000 ; free physical = 6964 ; free virtual = 18455
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'reception' [/user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/emission/rtl/reception.vhd:38]
+	Module reception : Parameter f_clk bound to: 100000000.000000 - type: double 
+	Module reception : Parameter uart_rate bound to: 115200.000000 - type: double 
+	Module reception : Parameter parity_bit bound to: 0 - type: bool 
+	Module reception : Parameter parity_odd bound to: 1 - type: bool 
+	Module reception : Parameter stop_bit_1 bound to: 1 - type: bool 
+INFO: [Synth 8-638] synthesizing module 'uart' [/user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/uart/rtl/uart.vhd:79]
+	Module uart : Parameter f_clk bound to: 100000000.000000 - type: double 
+	Module uart : Parameter uart_rate bound to: 115200.000000 - type: double 
+	Module uart : Parameter data_width bound to: 8 - type: integer 
+	Module uart : Parameter parity_bit bound to: 0 - type: bool 
+	Module uart : Parameter parity_odd bound to: 1 - type: bool 
+	Module uart : Parameter stop_bit_1 bound to: 1 - type: bool 
+INFO: [Synth 8-638] synthesizing module 'uart_tx' [/user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/uart/rtl/uart_tx.vhd:25]
+	Module uart_tx : Parameter f_clk bound to: 100000000.000000 - type: double 
+	Module uart_tx : Parameter f_baud bound to: 115200.000000 - type: double 
+	Module uart_tx : Parameter N bound to: 8 - type: integer 
+	Module uart_tx : Parameter parity_bit bound to: 0 - type: bool 
+	Module uart_tx : Parameter parity_odd bound to: 1 - type: bool 
+	Module uart_tx : Parameter stop_bit_1 bound to: 1 - type: bool 
+INFO: [Synth 8-256] done synthesizing module 'uart_tx' (0#1) [/user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/uart/rtl/uart_tx.vhd:25]
+INFO: [Synth 8-638] synthesizing module 'uart_rx' [/user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/uart/rtl/uart_rx.vhd:27]
+	Module uart_rx : Parameter f_clk bound to: 100000000.000000 - type: double 
+	Module uart_rx : Parameter f_baud bound to: 115200.000000 - type: double 
+	Module uart_rx : Parameter N bound to: 8 - type: integer 
+	Module uart_rx : Parameter parity_bit bound to: 0 - type: bool 
+	Module uart_rx : Parameter parity_odd bound to: 1 - type: bool 
+	Module uart_rx : Parameter stop_bit_1 bound to: 1 - type: bool 
+INFO: [Synth 8-256] done synthesizing module 'uart_rx' (0#1) [/user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/uart/rtl/uart_rx.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'uart' (0#1) [/user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/uart/rtl/uart.vhd:79]
+INFO: [Synth 8-256] done synthesizing module 'reception' (0#1) [/user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/emission/rtl/reception.vhd:38]
+INFO: [Synth 8-7261] Parallel RTL Optimization Phase 1 criteria is not met
+WARNING: [Synth 8-3917] design reception has port led[15] driven by constant 0
+WARNING: [Synth 8-3917] design reception has port led[14] driven by constant 0
+WARNING: [Synth 8-3917] design reception has port led[13] driven by constant 0
+WARNING: [Synth 8-3917] design reception has port led[12] driven by constant 0
+WARNING: [Synth 8-3917] design reception has port led[11] driven by constant 0
+WARNING: [Synth 8-3917] design reception has port cts driven by constant 0
+WARNING: [Synth 8-3917] design reception has port rst driven by constant 1
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2579.305 ; gain = 0.000 ; free physical = 7953 ; free virtual = 19444
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2579.305 ; gain = 0.000 ; free physical = 7952 ; free virtual = 19443
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2579.305 ; gain = 0.000 ; free physical = 7952 ; free virtual = 19443
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2579.305 ; gain = 0.000 ; free physical = 7945 ; free virtual = 19436
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/emission/impl/basys3_reception.xdc]
+Finished Parsing XDC File [/user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/emission/impl/basys3_reception.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/emission/impl/basys3_reception.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/reception_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/reception_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2643.336 ; gain = 0.000 ; free physical = 7788 ; free virtual = 19279
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2643.336 ; gain = 0.000 ; free physical = 7786 ; free virtual = 19277
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 2643.336 ; gain = 64.031 ; free physical = 7921 ; free virtual = 19412
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 2643.336 ; gain = 64.031 ; free physical = 7921 ; free virtual = 19412
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 2643.336 ; gain = 64.031 ; free physical = 7921 ; free virtual = 19412
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'uart_tx'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'uart_rx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                              000
+                startbit |                               01 |                              001
+                 databit |                               10 |                              010
+                 stopbit |                               11 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'uart_tx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                              000
+                startbit |                               01 |                              001
+                 databit |                               10 |                              010
+                 stopbit |                               11 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'uart_rx'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 2643.336 ; gain = 64.031 ; free physical = 7913 ; free virtual = 19404
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   10 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 26    
++---Registers : 
+	               10 Bit    Registers := 2     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input   10 Bit        Muxes := 3     
+	   2 Input    9 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 4     
+	   2 Input    5 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 6     
+	   4 Input    2 Bit        Muxes := 7     
+	   3 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 15    
+	   4 Input    1 Bit        Muxes := 9     
+	   3 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module reception 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 24    
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    8 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 2     
+Module uart_tx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   10 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input   10 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 4     
+	   4 Input    2 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 5     
+	   4 Input    1 Bit        Muxes := 4     
+Module uart_rx 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   10 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input   10 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 2     
+	   3 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 4     
+	   4 Input    1 Bit        Muxes := 5     
+	   2 Input    1 Bit        Muxes := 8     
+	   3 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design reception has port led[15] driven by constant 0
+WARNING: [Synth 8-3917] design reception has port led[14] driven by constant 0
+WARNING: [Synth 8-3917] design reception has port led[13] driven by constant 0
+WARNING: [Synth 8-3917] design reception has port led[12] driven by constant 0
+WARNING: [Synth 8-3917] design reception has port led[11] driven by constant 0
+WARNING: [Synth 8-3917] design reception has port cts driven by constant 0
+WARNING: [Synth 8-3917] design reception has port rst driven by constant 1
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 2643.336 ; gain = 64.031 ; free physical = 7903 ; free virtual = 19394
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 2643.336 ; gain = 64.031 ; free physical = 7779 ; free virtual = 19270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 2643.336 ; gain = 64.031 ; free physical = 7775 ; free virtual = 19266
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 2643.336 ; gain = 64.031 ; free physical = 7775 ; free virtual = 19266
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 2643.336 ; gain = 64.031 ; free physical = 7781 ; free virtual = 19272
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 2643.336 ; gain = 64.031 ; free physical = 7781 ; free virtual = 19272
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 2643.336 ; gain = 64.031 ; free physical = 7781 ; free virtual = 19272
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 2643.336 ; gain = 64.031 ; free physical = 7781 ; free virtual = 19272
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 2643.336 ; gain = 64.031 ; free physical = 7781 ; free virtual = 19272
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 2643.336 ; gain = 64.031 ; free physical = 7781 ; free virtual = 19272
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     2|
+|3     |LUT1   |     1|
+|4     |LUT2   |     5|
+|5     |LUT3   |     9|
+|6     |LUT4   |    35|
+|7     |LUT5   |    14|
+|8     |LUT6   |    18|
+|9     |FDCE   |    49|
+|10    |FDPE   |     3|
+|11    |IBUF   |     5|
+|12    |OBUF   |    20|
++------+-------+------+
+
+Report Instance Areas: 
++------+-----------+--------+------+
+|      |Instance   |Module  |Cells |
++------+-----------+--------+------+
+|1     |top        |        |   162|
+|2     |  l        |uart    |   128|
+|3     |    recept |uart_rx |    74|
+|4     |    trans  |uart_tx |    54|
++------+-----------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 2643.336 ; gain = 64.031 ; free physical = 7781 ; free virtual = 19272
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:24 . Memory (MB): peak = 2643.336 ; gain = 0.000 ; free physical = 7831 ; free virtual = 19322
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 2643.336 ; gain = 64.031 ; free physical = 7832 ; free virtual = 19323
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2643.336 ; gain = 0.000 ; free physical = 7927 ; free virtual = 19418
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2643.336 ; gain = 0.000 ; free physical = 7871 ; free virtual = 19362
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: a39bb00d
+INFO: [Common 17-83] Releasing license: Synthesis
+34 Infos, 16 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:40 . Memory (MB): peak = 2643.336 ; gain = 64.238 ; free physical = 7958 ; free virtual = 19449
+INFO: [Common 17-1381] The checkpoint '/user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/emission/impl/tp_bluetooth_reception/tp_bluetooth_reception.runs/synth_1/reception.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file reception_utilization_synth.rpt -pb reception_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Nov  3 14:02:20 2023...

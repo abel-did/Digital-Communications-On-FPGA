@@ -1,0 +1,3056 @@
+# //  Questa Sim-64
+# //  Version 2022.2 linux_x86_64 Apr 25 2022
+# //
+# //  Copyright 1991-2022 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+source simu.tcl
+# QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+# Start time: 12:49:48 on Oct 30,2023
+# vcom -reportprogress 300 ../../uart/rtl/uart_rx.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity uart_rx
+# -- Compiling architecture rtl of uart_rx
+# End time: 12:49:49 on Oct 30,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+# Start time: 12:49:49 on Oct 30,2023
+# vcom -reportprogress 300 ../../uart/rtl/uart_tx.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity uart_tx
+# -- Compiling architecture rtl of uart_tx
+# End time: 12:49:49 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+# Start time: 12:49:49 on Oct 30,2023
+# vcom -reportprogress 300 ../../uart/rtl/uart.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package MATH_REAL
+# -- Compiling entity uart
+# -- Compiling architecture rtl of uart
+# -- Loading package NUMERIC_STD
+# -- Loading entity uart_tx
+# -- Loading entity uart_rx
+# End time: 12:49:49 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+# Start time: 12:49:49 on Oct 30,2023
+# vcom -reportprogress 300 -2008 ../rtl/rom_message.vhd 
+# -- Loading package STANDARD
+# -- Loading package MATH_REAL
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity rom_message
+# -- Compiling architecture rtl of rom_message
+# End time: 12:49:50 on Oct 30,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+# Start time: 12:49:50 on Oct 30,2023
+# vcom -reportprogress 300 -2008 ../rtl/emission.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity emission
+# -- Compiling architecture rtl of emission
+# -- Loading entity rom_message
+# -- Loading entity uart
+# End time: 12:49:50 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+# Start time: 12:49:50 on Oct 30,2023
+# vcom -reportprogress 300 -2008 ../rtl/reception.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity reception
+# -- Compiling architecture rtl of reception
+# -- Loading entity uart
+# End time: 12:49:51 on Oct 30,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+# Start time: 12:49:51 on Oct 30,2023
+# vcom -reportprogress 300 tb_emission.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity tb_emission
+# -- Compiling architecture rtl of tb_emission
+# -- Loading entity emission
+# -- Loading entity reception
+# End time: 12:49:51 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" tb_emission 
+# Start time: 12:49:51 on Oct 30,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vopt-143) Recognized 1 FSM in architecture body "emission(rtl)".
+# ** Note: (vopt-143) Recognized 1 FSM in architecture body "uart_rx(rtl)".
+# ** Note: (vopt-143) Recognized 1 FSM in architecture body "uart_tx(rtl)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading work.tb_emission(rtl)#1
+# Loading work.emission(rtl)#1
+# Loading work.rom_message(rtl)#1
+# Loading work.uart(rtl)#1
+# Loading work.uart_tx(rtl)#1
+# Loading work.uart_rx(rtl)#1
+# Loading work.reception(rtl)#1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /tb_emission/retour/l/trans
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /tb_emission/retour/PC/trans
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /tb_emission/dut/l/trans
+# ** Note: data_rx : Ox02 soit en ASCII 
+#    Time: 1025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2A soit en ASCII *
+#    Time: 2025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2A soit en ASCII *
+#    Time: 3025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2A soit en ASCII *
+#    Time: 4025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2A soit en ASCII *
+#    Time: 5025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2A soit en ASCII *
+#    Time: 6025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2A soit en ASCII *
+#    Time: 7025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2A soit en ASCII *
+#    Time: 8025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 9025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox07 soit en ASCII 
+#    Time: 10025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox04 soit en ASCII 
+#    Time: 11025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: ACK
+#    Time: 12015 ns  Iteration: 3  Instance: /tb_emission
+# ** Note: data_rx : Ox02 soit en ASCII 
+#    Time: 12055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2A soit en ASCII *
+#    Time: 13055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2A soit en ASCII *
+#    Time: 14055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2A soit en ASCII *
+#    Time: 15055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2A soit en ASCII *
+#    Time: 16055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2A soit en ASCII *
+#    Time: 17055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2A soit en ASCII *
+#    Time: 18055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2A soit en ASCII *
+#    Time: 19055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 20055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox07 soit en ASCII 
+#    Time: 21055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox04 soit en ASCII 
+#    Time: 22055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: ACK
+#    Time: 23045 ns  Iteration: 3  Instance: /tb_emission
+add wave -position insertpoint sim:/tb_emission/retour/*
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/emission_aml/tb/chrono.tcl
+source simu.tcl
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is didouha@pc3401a.
+# QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+# Start time: 12:53:16 on Oct 30,2023
+# vcom -reportprogress 300 ../../uart/rtl/uart_rx.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity uart_rx
+# -- Compiling architecture rtl of uart_rx
+# End time: 12:53:17 on Oct 30,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+# Start time: 12:53:17 on Oct 30,2023
+# vcom -reportprogress 300 ../../uart/rtl/uart_tx.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity uart_tx
+# -- Compiling architecture rtl of uart_tx
+# End time: 12:53:17 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+# Start time: 12:53:17 on Oct 30,2023
+# vcom -reportprogress 300 ../../uart/rtl/uart.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package MATH_REAL
+# -- Compiling entity uart
+# -- Compiling architecture rtl of uart
+# -- Loading package NUMERIC_STD
+# -- Loading entity uart_tx
+# -- Loading entity uart_rx
+# End time: 12:53:18 on Oct 30,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+# Start time: 12:53:18 on Oct 30,2023
+# vcom -reportprogress 300 -2008 ../rtl/rom_message.vhd 
+# -- Loading package STANDARD
+# -- Loading package MATH_REAL
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity rom_message
+# -- Compiling architecture rtl of rom_message
+# End time: 12:53:18 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+# Start time: 12:53:18 on Oct 30,2023
+# vcom -reportprogress 300 -2008 ../rtl/emission.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity emission
+# -- Compiling architecture rtl of emission
+# -- Loading entity rom_message
+# -- Loading entity uart
+# End time: 12:53:19 on Oct 30,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+# Start time: 12:53:19 on Oct 30,2023
+# vcom -reportprogress 300 -2008 ../rtl/reception.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity reception
+# -- Compiling architecture rtl of reception
+# -- Loading entity uart
+# End time: 12:53:19 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+# Start time: 12:53:19 on Oct 30,2023
+# vcom -reportprogress 300 tb_emission.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity tb_emission
+# -- Compiling architecture rtl of tb_emission
+# -- Loading entity emission
+# -- Loading entity reception
+# End time: 12:53:20 on Oct 30,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 12:53:32 on Oct 30,2023, Elapsed time: 0:03:41
+# Errors: 0, Warnings: 4
+# vsim -voptargs="+acc" tb_emission 
+# Start time: 12:53:32 on Oct 30,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vopt-143) Recognized 1 FSM in architecture body "emission(rtl)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading work.tb_emission(rtl)#1
+# Loading work.emission(rtl)#1
+# Loading work.rom_message(rtl)#1
+# Loading work.uart(rtl)#1
+# Loading work.uart_tx(rtl)#1
+# Loading work.uart_rx(rtl)#1
+# Loading work.reception(rtl)#1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /tb_emission/retour/l/trans
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /tb_emission/retour/PC/trans
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /tb_emission/dut/l/trans
+# ** Note: data_rx : Ox02 soit en ASCII 
+#    Time: 1025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox42 soit en ASCII B
+#    Time: 2025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 3025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 4025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox76 soit en ASCII v
+#    Time: 5025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 6025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox21 soit en ASCII !
+#    Time: 7025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 8025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox4C soit en ASCII L
+#    Time: 9025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 10025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 11025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox74 soit en ASCII t
+#    Time: 12025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 13025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 14025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 15025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 16025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6D soit en ASCII m
+#    Time: 17025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 18025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 19025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 20025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 21025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 22025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 23025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 24025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 25025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 26025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox74 soit en ASCII t
+#    Time: 27025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 28025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 29025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox70 soit en ASCII p
+#    Time: 30025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 31025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 32025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 33025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox74 soit en ASCII t
+#    Time: 34025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 35025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 36025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 37025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 38025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 39025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6C soit en ASCII l
+#    Time: 40025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6C soit en ASCII l
+#    Time: 41025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 42025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2E soit en ASCII .
+#    Time: 43025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 44025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox56 soit en ASCII V
+#    Time: 45025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 46025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 47025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 48025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox66 soit en ASCII f
+#    Time: 49025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 50025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 51025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox7A soit en ASCII z
+#    Time: 52025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 53025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 54025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox52 soit en ASCII R
+#    Time: 55025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 56025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 57025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox4F soit en ASCII O
+#    Time: 58025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox4B soit en ASCII K
+#    Time: 59025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 60025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox3A soit en ASCII :
+#    Time: 61025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 62025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox30 soit en ASCII 0
+#    Time: 63025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox78 soit en ASCII x
+#    Time: 64025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox30 soit en ASCII 0
+#    Time: 65025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox36 soit en ASCII 6
+#    Time: 66025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 67025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 68025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox75 soit en ASCII u
+#    Time: 69025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 70025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 71025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6C soit en ASCII l
+#    Time: 72025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 73025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox64 soit en ASCII d
+#    Time: 74025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2C soit en ASCII ,
+#    Time: 75025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 76025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 77025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 78025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 79025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox30 soit en ASCII 0
+#    Time: 80025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox78 soit en ASCII x
+#    Time: 81025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox31 soit en ASCII 1
+#    Time: 82025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox35 soit en ASCII 5
+#    Time: 83025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2C soit en ASCII ,
+#    Time: 84025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 85025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 86025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 87025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 88025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 89025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox75 soit en ASCII u
+#    Time: 90025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 91025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 92025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox64 soit en ASCII d
+#    Time: 93025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 94025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 95025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 96025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox52 soit en ASCII R
+#    Time: 97025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 98025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2E soit en ASCII .
+#    Time: 99025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 100025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 101025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 102025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 103025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 104025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 105025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 106025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 107025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 108025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 109025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 110025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 111025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 112025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 113025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 114025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 115025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 116025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 117025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 118025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 119025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 120025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 121025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 122025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 123025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 124025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 125025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 126025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 127025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 128025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 129025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6B soit en ASCII k
+#    Time: 130025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox04 soit en ASCII 
+#    Time: 131025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: ACK
+#    Time: 132015 ns  Iteration: 3  Instance: /tb_emission
+# ** Note: data_rx : Ox02 soit en ASCII 
+#    Time: 132055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox42 soit en ASCII B
+#    Time: 133055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 134055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 135055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox76 soit en ASCII v
+#    Time: 136055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 137055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox21 soit en ASCII !
+#    Time: 138055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 139055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox4C soit en ASCII L
+#    Time: 140055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 141055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 142055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox74 soit en ASCII t
+#    Time: 143055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 144055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 145055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 146055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 147055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6D soit en ASCII m
+#    Time: 148055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 149055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 150055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 151055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 152055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 153055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 154055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 155055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 156055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 157055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox74 soit en ASCII t
+#    Time: 158055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 159055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 160055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox70 soit en ASCII p
+#    Time: 161055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 162055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 163055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 164055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox74 soit en ASCII t
+#    Time: 165055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 166055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 167055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 168055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 169055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 170055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6C soit en ASCII l
+#    Time: 171055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6C soit en ASCII l
+#    Time: 172055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 173055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2E soit en ASCII .
+#    Time: 174055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 175055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox56 soit en ASCII V
+#    Time: 176055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 177055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 178055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 179055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox66 soit en ASCII f
+#    Time: 180055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 181055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 182055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox7A soit en ASCII z
+#    Time: 183055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 184055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 185055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox52 soit en ASCII R
+#    Time: 186055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 187055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 188055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox4F soit en ASCII O
+#    Time: 189055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox4B soit en ASCII K
+#    Time: 190055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 191055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox3A soit en ASCII :
+#    Time: 192055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 193055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox30 soit en ASCII 0
+#    Time: 194055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox78 soit en ASCII x
+#    Time: 195055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox30 soit en ASCII 0
+#    Time: 196055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox36 soit en ASCII 6
+#    Time: 197055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 198055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 199055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox75 soit en ASCII u
+#    Time: 200055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 201055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 202055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6C soit en ASCII l
+#    Time: 203055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 204055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox64 soit en ASCII d
+#    Time: 205055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2C soit en ASCII ,
+#    Time: 206055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 207055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 208055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 209055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 210055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox30 soit en ASCII 0
+#    Time: 211055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox78 soit en ASCII x
+#    Time: 212055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox31 soit en ASCII 1
+#    Time: 213055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox35 soit en ASCII 5
+#    Time: 214055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2C soit en ASCII ,
+#    Time: 215055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 216055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 217055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 218055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 219055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 220055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox75 soit en ASCII u
+#    Time: 221055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 222055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 223055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox64 soit en ASCII d
+#    Time: 224055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 225055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 226055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 227055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox52 soit en ASCII R
+#    Time: 228055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 229055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2E soit en ASCII .
+#    Time: 230055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 231055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 232055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 233055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 234055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 235055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 236055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 237055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 238055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 239055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 240055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 241055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 242055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 243055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 244055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 245055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 246055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 247055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 248055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 249055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 250055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 251055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 252055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 253055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 254055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 255055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 256055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 257055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 258055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 259055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 260055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6B soit en ASCII k
+#    Time: 261055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox04 soit en ASCII 
+#    Time: 262055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: ACK
+#    Time: 263045 ns  Iteration: 3  Instance: /tb_emission
+# ** Note: data_rx : Ox02 soit en ASCII 
+#    Time: 263085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox42 soit en ASCII B
+#    Time: 264085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 265085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 266085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox76 soit en ASCII v
+#    Time: 267085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 268085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox21 soit en ASCII !
+#    Time: 269085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 270085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox4C soit en ASCII L
+#    Time: 271085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 272085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 273085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox74 soit en ASCII t
+#    Time: 274085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 275085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 276085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 277085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 278085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6D soit en ASCII m
+#    Time: 279085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 280085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 281085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 282085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 283085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 284085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 285085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 286085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 287085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 288085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox74 soit en ASCII t
+#    Time: 289085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 290085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 291085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox70 soit en ASCII p
+#    Time: 292085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 293085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 294085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 295085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox74 soit en ASCII t
+#    Time: 296085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 297085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 298085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 299085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 300085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 301085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6C soit en ASCII l
+#    Time: 302085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6C soit en ASCII l
+#    Time: 303085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 304085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2E soit en ASCII .
+#    Time: 305085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 306085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox56 soit en ASCII V
+#    Time: 307085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 308085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 309085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 310085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox66 soit en ASCII f
+#    Time: 311085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 312085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 313085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox7A soit en ASCII z
+#    Time: 314085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 315085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 316085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox52 soit en ASCII R
+#    Time: 317085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 318085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 319085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox4F soit en ASCII O
+#    Time: 320085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox4B soit en ASCII K
+#    Time: 321085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 322085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox3A soit en ASCII :
+#    Time: 323085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 324085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox30 soit en ASCII 0
+#    Time: 325085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox78 soit en ASCII x
+#    Time: 326085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox30 soit en ASCII 0
+#    Time: 327085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox36 soit en ASCII 6
+#    Time: 328085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 329085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 330085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox75 soit en ASCII u
+#    Time: 331085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 332085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 333085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6C soit en ASCII l
+#    Time: 334085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 335085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox64 soit en ASCII d
+#    Time: 336085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2C soit en ASCII ,
+#    Time: 337085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 338085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 339085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 340085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 341085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox30 soit en ASCII 0
+#    Time: 342085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox78 soit en ASCII x
+#    Time: 343085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox31 soit en ASCII 1
+#    Time: 344085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox35 soit en ASCII 5
+#    Time: 345085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2C soit en ASCII ,
+#    Time: 346085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 347085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 348085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 349085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 350085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 351085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox75 soit en ASCII u
+#    Time: 352085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 353085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 354085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox64 soit en ASCII d
+#    Time: 355085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 356085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 357085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 358085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox52 soit en ASCII R
+#    Time: 359085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 360085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2E soit en ASCII .
+#    Time: 361085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 362085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 363085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 364085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 365085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 366085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 367085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 368085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 369085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 370085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 371085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 372085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 373085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 374085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 375085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 376085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 377085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 378085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 379085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 380085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 381085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 382085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 383085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 384085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 385085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 386085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 387085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 388085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 389085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 390085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 391085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6B soit en ASCII k
+#    Time: 392085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox04 soit en ASCII 
+#    Time: 393085 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: ACK
+#    Time: 394075 ns  Iteration: 3  Instance: /tb_emission
+# ** Note: data_rx : Ox02 soit en ASCII 
+#    Time: 394115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox42 soit en ASCII B
+#    Time: 395115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 396115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 397115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox76 soit en ASCII v
+#    Time: 398115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 399115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox21 soit en ASCII !
+#    Time: 400115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 401115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox4C soit en ASCII L
+#    Time: 402115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 403115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 404115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox74 soit en ASCII t
+#    Time: 405115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 406115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 407115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 408115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 409115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6D soit en ASCII m
+#    Time: 410115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 411115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 412115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 413115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 414115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 415115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 416115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 417115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 418115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 419115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox74 soit en ASCII t
+#    Time: 420115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 421115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 422115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox70 soit en ASCII p
+#    Time: 423115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 424115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 425115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 426115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox74 soit en ASCII t
+#    Time: 427115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 428115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 429115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 430115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 431115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 432115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6C soit en ASCII l
+#    Time: 433115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6C soit en ASCII l
+#    Time: 434115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 435115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2E soit en ASCII .
+#    Time: 436115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 437115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox56 soit en ASCII V
+#    Time: 438115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 439115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 440115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 441115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox66 soit en ASCII f
+#    Time: 442115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 443115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 444115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox7A soit en ASCII z
+#    Time: 445115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 446115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 447115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox52 soit en ASCII R
+#    Time: 448115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 449115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 450115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox4F soit en ASCII O
+#    Time: 451115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox4B soit en ASCII K
+#    Time: 452115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 453115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox3A soit en ASCII :
+#    Time: 454115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 455115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox30 soit en ASCII 0
+#    Time: 456115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox78 soit en ASCII x
+#    Time: 457115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox30 soit en ASCII 0
+#    Time: 458115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox36 soit en ASCII 6
+#    Time: 459115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 460115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 461115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox75 soit en ASCII u
+#    Time: 462115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 463115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 464115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6C soit en ASCII l
+#    Time: 465115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 466115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox64 soit en ASCII d
+#    Time: 467115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2C soit en ASCII ,
+#    Time: 468115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 469115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 470115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 471115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 472115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox30 soit en ASCII 0
+#    Time: 473115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox78 soit en ASCII x
+#    Time: 474115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox31 soit en ASCII 1
+#    Time: 475115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox35 soit en ASCII 5
+#    Time: 476115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2C soit en ASCII ,
+#    Time: 477115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 478115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 479115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 480115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 481115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 482115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox75 soit en ASCII u
+#    Time: 483115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 484115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 485115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox64 soit en ASCII d
+#    Time: 486115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 487115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 488115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 489115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox52 soit en ASCII R
+#    Time: 490115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 491115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2E soit en ASCII .
+#    Time: 492115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 493115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 494115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 495115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 496115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 497115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 498115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 499115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 500115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 501115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 502115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 503115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 504115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 505115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 506115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 507115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 508115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 509115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 510115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 511115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 512115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 513115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 514115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 515115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 516115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 517115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 518115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 519115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 520115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 521115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 522115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6B soit en ASCII k
+#    Time: 523115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox04 soit en ASCII 
+#    Time: 524115 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: ACK
+#    Time: 525105 ns  Iteration: 3  Instance: /tb_emission
+# ** Note: data_rx : Ox02 soit en ASCII 
+#    Time: 525145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox42 soit en ASCII B
+#    Time: 526145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 527145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 528145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox76 soit en ASCII v
+#    Time: 529145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 530145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox21 soit en ASCII !
+#    Time: 531145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 532145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox4C soit en ASCII L
+#    Time: 533145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 534145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 535145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox74 soit en ASCII t
+#    Time: 536145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 537145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 538145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 539145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 540145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6D soit en ASCII m
+#    Time: 541145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 542145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 543145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 544145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 545145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 546145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 547145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 548145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 549145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 550145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox74 soit en ASCII t
+#    Time: 551145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 552145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 553145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox70 soit en ASCII p
+#    Time: 554145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 555145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 556145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 557145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox74 soit en ASCII t
+#    Time: 558145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 559145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 560145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 561145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 562145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 563145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6C soit en ASCII l
+#    Time: 564145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6C soit en ASCII l
+#    Time: 565145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 566145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2E soit en ASCII .
+#    Time: 567145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 568145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox56 soit en ASCII V
+#    Time: 569145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 570145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 571145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 572145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox66 soit en ASCII f
+#    Time: 573145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 574145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 575145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox7A soit en ASCII z
+#    Time: 576145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 577145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 578145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox52 soit en ASCII R
+#    Time: 579145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 580145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 581145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox4F soit en ASCII O
+#    Time: 582145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox4B soit en ASCII K
+#    Time: 583145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 584145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox3A soit en ASCII :
+#    Time: 585145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 586145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox30 soit en ASCII 0
+#    Time: 587145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox78 soit en ASCII x
+#    Time: 588145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox30 soit en ASCII 0
+#    Time: 589145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox36 soit en ASCII 6
+#    Time: 590145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 591145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 592145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox75 soit en ASCII u
+#    Time: 593145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 594145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 595145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6C soit en ASCII l
+#    Time: 596145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 597145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox64 soit en ASCII d
+#    Time: 598145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2C soit en ASCII ,
+#    Time: 599145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 600145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 601145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 602145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 603145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox30 soit en ASCII 0
+#    Time: 604145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox78 soit en ASCII x
+#    Time: 605145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox31 soit en ASCII 1
+#    Time: 606145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox35 soit en ASCII 5
+#    Time: 607145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2C soit en ASCII ,
+#    Time: 608145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 609145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 610145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 611145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 612145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 613145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox75 soit en ASCII u
+#    Time: 614145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 615145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 616145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox64 soit en ASCII d
+#    Time: 617145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 618145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 619145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 620145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox52 soit en ASCII R
+#    Time: 621145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 622145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2E soit en ASCII .
+#    Time: 623145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 624145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 625145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 626145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 627145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 628145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 629145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 630145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 631145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 632145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 633145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 634145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 635145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 636145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 637145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 638145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 639145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 640145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 641145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 642145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 643145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 644145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 645145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 646145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 647145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 648145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 649145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 650145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 651145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 652145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 653145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6B soit en ASCII k
+#    Time: 654145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox04 soit en ASCII 
+#    Time: 655145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: ACK
+#    Time: 656135 ns  Iteration: 3  Instance: /tb_emission
+source simu.tcl
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is didouha@pc3401a.
+# QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+# Start time: 12:54:27 on Oct 30,2023
+# vcom -reportprogress 300 ../../uart/rtl/uart_rx.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity uart_rx
+# -- Compiling architecture rtl of uart_rx
+# End time: 12:54:27 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+# Start time: 12:54:27 on Oct 30,2023
+# vcom -reportprogress 300 ../../uart/rtl/uart_tx.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity uart_tx
+# -- Compiling architecture rtl of uart_tx
+# End time: 12:54:28 on Oct 30,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+# Start time: 12:54:28 on Oct 30,2023
+# vcom -reportprogress 300 ../../uart/rtl/uart.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package MATH_REAL
+# -- Compiling entity uart
+# -- Compiling architecture rtl of uart
+# -- Loading package NUMERIC_STD
+# -- Loading entity uart_tx
+# -- Loading entity uart_rx
+# End time: 12:54:28 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+# Start time: 12:54:28 on Oct 30,2023
+# vcom -reportprogress 300 -2008 ../rtl/rom_message.vhd 
+# -- Loading package STANDARD
+# -- Loading package MATH_REAL
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity rom_message
+# -- Compiling architecture rtl of rom_message
+# End time: 12:54:29 on Oct 30,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+# Start time: 12:54:29 on Oct 30,2023
+# vcom -reportprogress 300 -2008 ../rtl/emission.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity emission
+# -- Compiling architecture rtl of emission
+# -- Loading entity rom_message
+# -- Loading entity uart
+# End time: 12:54:29 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+# Start time: 12:54:29 on Oct 30,2023
+# vcom -reportprogress 300 -2008 ../rtl/reception.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity reception
+# -- Compiling architecture rtl of reception
+# -- Loading entity uart
+# End time: 12:54:30 on Oct 30,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+# Start time: 12:54:30 on Oct 30,2023
+# vcom -reportprogress 300 tb_emission.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity tb_emission
+# -- Compiling architecture rtl of tb_emission
+# -- Loading entity emission
+# -- Loading entity reception
+# End time: 12:54:30 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:54:42 on Oct 30,2023, Elapsed time: 0:01:10
+# Errors: 0, Warnings: 4
+# vsim -voptargs="+acc" tb_emission 
+# Start time: 12:54:42 on Oct 30,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vopt-143) Recognized 1 FSM in architecture body "emission(rtl)".
+# ** Note: (vopt-143) Recognized 1 FSM in architecture body "uart_rx(rtl)".
+# ** Note: (vopt-143) Recognized 1 FSM in architecture body "uart_tx(rtl)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading work.tb_emission(rtl)#1
+# Loading work.emission(rtl)#1
+# Loading work.rom_message(rtl)#1
+# Loading work.uart(rtl)#1
+# Loading work.uart_tx(rtl)#1
+# Loading work.uart_rx(rtl)#1
+# Loading work.reception(rtl)#1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /tb_emission/retour/l/trans
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /tb_emission/retour/PC/trans
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /tb_emission/dut/l/trans
+# ** Note: data_rx : Ox02 soit en ASCII 
+#    Time: 82545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox42 soit en ASCII B
+#    Time: 169345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 256145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 342945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox76 soit en ASCII v
+#    Time: 429745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 516545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox21 soit en ASCII !
+#    Time: 603345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 690145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox4C soit en ASCII L
+#    Time: 776945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 863745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 950545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox74 soit en ASCII t
+#    Time: 1037345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 1124145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 1210945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 1297745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 1384545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6D soit en ASCII m
+#    Time: 1471345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 1558145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 1644945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 1731745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 1818545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 1905345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 1992145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 2078945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 2165745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 2252545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox74 soit en ASCII t
+#    Time: 2339345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 2426145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 2512945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox70 soit en ASCII p
+#    Time: 2599745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 2686545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 2773345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 2860145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox74 soit en ASCII t
+#    Time: 2946945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 3033745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 3120545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 3207345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 3294145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 3380945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6C soit en ASCII l
+#    Time: 3467745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6C soit en ASCII l
+#    Time: 3554545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 3641345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2E soit en ASCII .
+#    Time: 3728145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 3814945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox56 soit en ASCII V
+#    Time: 3901745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 3988545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 4075345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 4162145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox66 soit en ASCII f
+#    Time: 4248945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 4335745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 4422545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox7A soit en ASCII z
+#    Time: 4509345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 4596145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 4682945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox52 soit en ASCII R
+#    Time: 4769745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 4856545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 4943345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox4F soit en ASCII O
+#    Time: 5030145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox4B soit en ASCII K
+#    Time: 5116945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 5203745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox3A soit en ASCII :
+#    Time: 5290545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 5377345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox30 soit en ASCII 0
+#    Time: 5464145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox78 soit en ASCII x
+#    Time: 5550945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox30 soit en ASCII 0
+#    Time: 5637745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox36 soit en ASCII 6
+#    Time: 5724545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 5811345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 5898145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox75 soit en ASCII u
+#    Time: 5984945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 6071745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 6158545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6C soit en ASCII l
+#    Time: 6245345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 6332145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox64 soit en ASCII d
+#    Time: 6418945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2C soit en ASCII ,
+#    Time: 6505745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 6592545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 6679345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 6766145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 6852945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox30 soit en ASCII 0
+#    Time: 6939745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox78 soit en ASCII x
+#    Time: 7026545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox31 soit en ASCII 1
+#    Time: 7113345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox35 soit en ASCII 5
+#    Time: 7200145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2C soit en ASCII ,
+#    Time: 7286945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 7373745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 7460545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 7547345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 7634145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 7720945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox75 soit en ASCII u
+#    Time: 7807745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 7894545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 7981345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox64 soit en ASCII d
+#    Time: 8068145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 8154945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 8241745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 8328545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox52 soit en ASCII R
+#    Time: 8415345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 8502145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2E soit en ASCII .
+#    Time: 8588945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 8675745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 8762545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 8849345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 8936145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 9022945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 9109745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 9196545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 9283345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 9370145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 9456945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 9543745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 9630545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 9717345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 9804145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 9890945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 9977745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 10064545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 10151345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 10238145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 10324945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 10411745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 10498545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 10585345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 10672145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 10758945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 10845745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 10932545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 11019345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 11106145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 11192945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6B soit en ASCII k
+#    Time: 11279745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox04 soit en ASCII 
+#    Time: 11366545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: ACK
+#    Time: 11449055 ns  Iteration: 3  Instance: /tb_emission
+# ** Note: data_rx : Ox42 soit en ASCII B
+#    Time: 11453345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 11540145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 11626945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox76 soit en ASCII v
+#    Time: 11713745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 11800545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox21 soit en ASCII !
+#    Time: 11887345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 11974145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox4C soit en ASCII L
+#    Time: 12060945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 12147745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 12234545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox74 soit en ASCII t
+#    Time: 12321345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 12408145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 12494945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 12581745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 12668545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6D soit en ASCII m
+#    Time: 12755345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 12842145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 12928945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 13015745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 13102545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 13189345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 13276145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 13362945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 13449745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 13536545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox74 soit en ASCII t
+#    Time: 13623345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 13710145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 13796945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox70 soit en ASCII p
+#    Time: 13883745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 13970545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 14057345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 14144145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox74 soit en ASCII t
+#    Time: 14230945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 14317745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 14404545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 14491345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 14578145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 14664945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6C soit en ASCII l
+#    Time: 14751745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6C soit en ASCII l
+#    Time: 14838545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 14925345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2E soit en ASCII .
+#    Time: 15012145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 15098945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox56 soit en ASCII V
+#    Time: 15185745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 15272545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 15359345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 15446145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox66 soit en ASCII f
+#    Time: 15532945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 15619745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 15706545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox7A soit en ASCII z
+#    Time: 15793345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 15880145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 15966945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox52 soit en ASCII R
+#    Time: 16053745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 16140545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 16227345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox4F soit en ASCII O
+#    Time: 16314145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox4B soit en ASCII K
+#    Time: 16400945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 16487745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox3A soit en ASCII :
+#    Time: 16574545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 16661345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox30 soit en ASCII 0
+#    Time: 16748145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox78 soit en ASCII x
+#    Time: 16834945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox30 soit en ASCII 0
+#    Time: 16921745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox36 soit en ASCII 6
+#    Time: 17008545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 17095345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 17182145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox75 soit en ASCII u
+#    Time: 17268945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 17355745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 17442545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6C soit en ASCII l
+#    Time: 17529345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 17616145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox64 soit en ASCII d
+#    Time: 17702945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2C soit en ASCII ,
+#    Time: 17789745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 17876545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 17963345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 18050145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 18136945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox30 soit en ASCII 0
+#    Time: 18223745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox78 soit en ASCII x
+#    Time: 18310545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox31 soit en ASCII 1
+#    Time: 18397345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox35 soit en ASCII 5
+#    Time: 18484145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2C soit en ASCII ,
+#    Time: 18570945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 18657745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 18744545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 18831345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 18918145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 19004945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox75 soit en ASCII u
+#    Time: 19091745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 19178545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 19265345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox64 soit en ASCII d
+#    Time: 19352145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 19438945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 19525745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 19612545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox52 soit en ASCII R
+#    Time: 19699345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 19786145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2E soit en ASCII .
+#    Time: 19872945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 19959745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 20046545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 20133345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 20220145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 20306945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 20393745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 20480545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 20567345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 20654145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 20740945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 20827745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 20914545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 21001345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 21088145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 21174945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 21261745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 21348545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 21435345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 21522145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 21608945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 21695745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 21782545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 21869345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 21956145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 22042945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 22129745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 22216545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 22303345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 22390145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 22476945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6B soit en ASCII k
+#    Time: 22563745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox04 soit en ASCII 
+#    Time: 22650545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: ACK
+#    Time: 22733055 ns  Iteration: 3  Instance: /tb_emission
+# ** Note: data_rx : Ox42 soit en ASCII B
+#    Time: 22737345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 22824145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 22910945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox76 soit en ASCII v
+#    Time: 22997745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 23084545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox21 soit en ASCII !
+#    Time: 23171345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 23258145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox4C soit en ASCII L
+#    Time: 23344945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 23431745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 23518545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox74 soit en ASCII t
+#    Time: 23605345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 23692145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 23778945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 23865745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 23952545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6D soit en ASCII m
+#    Time: 24039345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 24126145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 24212945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 24299745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 24386545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 24473345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 24560145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 24646945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 24733745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 24820545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox74 soit en ASCII t
+#    Time: 24907345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 24994145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 25080945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox70 soit en ASCII p
+#    Time: 25167745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 25254545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 25341345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 25428145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox74 soit en ASCII t
+#    Time: 25514945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 25601745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 25688545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 25775345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 25862145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 25948945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6C soit en ASCII l
+#    Time: 26035745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6C soit en ASCII l
+#    Time: 26122545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 26209345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2E soit en ASCII .
+#    Time: 26296145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 26382945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox56 soit en ASCII V
+#    Time: 26469745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 26556545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 26643345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 26730145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox66 soit en ASCII f
+#    Time: 26816945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 26903745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 26990545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox7A soit en ASCII z
+#    Time: 27077345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 27164145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 27250945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox52 soit en ASCII R
+#    Time: 27337745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 27424545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 27511345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox4F soit en ASCII O
+#    Time: 27598145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox4B soit en ASCII K
+#    Time: 27684945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 27771745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox3A soit en ASCII :
+#    Time: 27858545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 27945345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox30 soit en ASCII 0
+#    Time: 28032145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox78 soit en ASCII x
+#    Time: 28118945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox30 soit en ASCII 0
+#    Time: 28205745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox36 soit en ASCII 6
+#    Time: 28292545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 28379345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 28466145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox75 soit en ASCII u
+#    Time: 28552945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 28639745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 28726545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6C soit en ASCII l
+#    Time: 28813345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 28900145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox64 soit en ASCII d
+#    Time: 28986945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2C soit en ASCII ,
+#    Time: 29073745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 29160545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 29247345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 29334145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 29420945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox30 soit en ASCII 0
+#    Time: 29507745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox78 soit en ASCII x
+#    Time: 29594545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox31 soit en ASCII 1
+#    Time: 29681345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox35 soit en ASCII 5
+#    Time: 29768145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2C soit en ASCII ,
+#    Time: 29854945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 29941745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 30028545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 30115345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 30202145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 30288945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox75 soit en ASCII u
+#    Time: 30375745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 30462545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 30549345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox64 soit en ASCII d
+#    Time: 30636145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 30722945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 30809745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 30896545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox52 soit en ASCII R
+#    Time: 30983345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 31070145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2E soit en ASCII .
+#    Time: 31156945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 31243745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 31330545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 31417345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 31504145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 31590945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 31677745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 31764545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 31851345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 31938145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 32024945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 32111745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 32198545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 32285345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 32372145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 32458945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 32545745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 32632545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 32719345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 32806145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 32892945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 32979745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 33066545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 33153345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 33240145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 33326945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 33413745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 33500545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 33587345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 33674145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 33760945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6B soit en ASCII k
+#    Time: 33847745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox04 soit en ASCII 
+#    Time: 33934545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: ACK
+#    Time: 34017055 ns  Iteration: 3  Instance: /tb_emission
+# ** Note: data_rx : Ox42 soit en ASCII B
+#    Time: 34021345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 34108145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 34194945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox76 soit en ASCII v
+#    Time: 34281745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 34368545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox21 soit en ASCII !
+#    Time: 34455345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 34542145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox4C soit en ASCII L
+#    Time: 34628945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 34715745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 34802545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox74 soit en ASCII t
+#    Time: 34889345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 34976145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 35062945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 35149745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 35236545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6D soit en ASCII m
+#    Time: 35323345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 35410145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 35496945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 35583745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 35670545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 35757345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 35844145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 35930945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 36017745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 36104545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox74 soit en ASCII t
+#    Time: 36191345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 36278145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 36364945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox70 soit en ASCII p
+#    Time: 36451745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 36538545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 36625345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 36712145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox74 soit en ASCII t
+#    Time: 36798945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 36885745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 36972545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 37059345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 37146145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 37232945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6C soit en ASCII l
+#    Time: 37319745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6C soit en ASCII l
+#    Time: 37406545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 37493345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2E soit en ASCII .
+#    Time: 37580145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 37666945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox56 soit en ASCII V
+#    Time: 37753745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 37840545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 37927345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 38014145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox66 soit en ASCII f
+#    Time: 38100945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 38187745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 38274545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox7A soit en ASCII z
+#    Time: 38361345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 38448145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 38534945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox52 soit en ASCII R
+#    Time: 38621745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 38708545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 38795345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox4F soit en ASCII O
+#    Time: 38882145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox4B soit en ASCII K
+#    Time: 38968945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 39055745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox3A soit en ASCII :
+#    Time: 39142545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 39229345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox30 soit en ASCII 0
+#    Time: 39316145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox78 soit en ASCII x
+#    Time: 39402945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox30 soit en ASCII 0
+#    Time: 39489745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox36 soit en ASCII 6
+#    Time: 39576545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 39663345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 39750145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox75 soit en ASCII u
+#    Time: 39836945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 39923745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 40010545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6C soit en ASCII l
+#    Time: 40097345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 40184145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox64 soit en ASCII d
+#    Time: 40270945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2C soit en ASCII ,
+#    Time: 40357745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 40444545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 40531345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 40618145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 40704945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox30 soit en ASCII 0
+#    Time: 40791745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox78 soit en ASCII x
+#    Time: 40878545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox31 soit en ASCII 1
+#    Time: 40965345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox35 soit en ASCII 5
+#    Time: 41052145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2C soit en ASCII ,
+#    Time: 41138945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 41225745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 41312545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 41399345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 41486145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 41572945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox75 soit en ASCII u
+#    Time: 41659745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 41746545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 41833345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox64 soit en ASCII d
+#    Time: 41920145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 42006945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 42093745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 42180545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox52 soit en ASCII R
+#    Time: 42267345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 42354145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2E soit en ASCII .
+#    Time: 42440945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 42527745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 42614545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 42701345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 42788145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 42874945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 42961745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 43048545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 43135345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 43222145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 43308945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 43395745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 43482545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 43569345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 43656145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 43742945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 43829745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 43916545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 44003345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 44090145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 44176945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 44263745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 44350545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 44437345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 44524145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 44610945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 44697745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 44784545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 44871345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 44958145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 45044945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6B soit en ASCII k
+#    Time: 45131745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox04 soit en ASCII 
+#    Time: 45218545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: ACK
+#    Time: 45301055 ns  Iteration: 3  Instance: /tb_emission
+# ** Note: data_rx : Ox42 soit en ASCII B
+#    Time: 45305345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 45392145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 45478945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox76 soit en ASCII v
+#    Time: 45565745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 45652545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox21 soit en ASCII !
+#    Time: 45739345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 45826145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox4C soit en ASCII L
+#    Time: 45912945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 45999745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 46086545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox74 soit en ASCII t
+#    Time: 46173345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 46260145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 46346945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 46433745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 46520545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6D soit en ASCII m
+#    Time: 46607345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 46694145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 46780945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 46867745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 46954545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 47041345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 47128145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 47214945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 47301745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 47388545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox74 soit en ASCII t
+#    Time: 47475345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 47562145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 47648945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox70 soit en ASCII p
+#    Time: 47735745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 47822545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 47909345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox61 soit en ASCII a
+#    Time: 47996145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox74 soit en ASCII t
+#    Time: 48082945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 48169745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 48256545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 48343345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6E soit en ASCII n
+#    Time: 48430145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 48516945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6C soit en ASCII l
+#    Time: 48603745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6C soit en ASCII l
+#    Time: 48690545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 48777345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2E soit en ASCII .
+#    Time: 48864145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 48950945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox56 soit en ASCII V
+#    Time: 49037745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 49124545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 49211345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 49298145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox66 soit en ASCII f
+#    Time: 49384945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 49471745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 49558545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox7A soit en ASCII z
+#    Time: 49645345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 49732145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 49818945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox52 soit en ASCII R
+#    Time: 49905745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 49992545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 50079345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox4F soit en ASCII O
+#    Time: 50166145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox4B soit en ASCII K
+#    Time: 50252945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 50339745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox3A soit en ASCII :
+#    Time: 50426545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 50513345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox30 soit en ASCII 0
+#    Time: 50600145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox78 soit en ASCII x
+#    Time: 50686945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox30 soit en ASCII 0
+#    Time: 50773745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox36 soit en ASCII 6
+#    Time: 50860545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 50947345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 51034145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox75 soit en ASCII u
+#    Time: 51120945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 51207745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 51294545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6C soit en ASCII l
+#    Time: 51381345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 51468145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox64 soit en ASCII d
+#    Time: 51554945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2C soit en ASCII ,
+#    Time: 51641745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 51728545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox73 soit en ASCII s
+#    Time: 51815345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 51902145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 51988945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox30 soit en ASCII 0
+#    Time: 52075745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox78 soit en ASCII x
+#    Time: 52162545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox31 soit en ASCII 1
+#    Time: 52249345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox35 soit en ASCII 5
+#    Time: 52336145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2C soit en ASCII ,
+#    Time: 52422945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 52509745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 52596545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 52683345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 52770145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 52856945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox75 soit en ASCII u
+#    Time: 52943745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox72 soit en ASCII r
+#    Time: 53030545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 53117345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox64 soit en ASCII d
+#    Time: 53204145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox65 soit en ASCII e
+#    Time: 53290945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 53377745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 53464545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox52 soit en ASCII R
+#    Time: 53551345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox43 soit en ASCII C
+#    Time: 53638145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox2E soit en ASCII .
+#    Time: 53724945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 53811745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 53898545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 53985345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 54072145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 54158945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 54245745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 54332545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 54419345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 54506145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 54592945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 54679745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 54766545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 54853345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 54940145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 55026945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 55113745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 55200545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 55287345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 55374145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 55460945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 55547745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 55634545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 55721345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 55808145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 55894945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 55981745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 56068545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 56155345 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 56242145 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox00 soit en ASCII 
+#    Time: 56328945 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6B soit en ASCII k
+#    Time: 56415745 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox04 soit en ASCII 
+#    Time: 56502545 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: ACK
+#    Time: 56585055 ns  Iteration: 3  Instance: /tb_emission
+# End time: 13:02:06 on Oct 30,2023, Elapsed time: 0:07:24
+# Errors: 0, Warnings: 4

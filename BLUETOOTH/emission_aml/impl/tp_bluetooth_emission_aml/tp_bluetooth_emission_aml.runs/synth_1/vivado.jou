@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Nov 13 14:04:54 2023
+# Process ID: 146573
+# Current directory: /user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/emission_aml/impl/tp_bluetooth_emission_aml/tp_bluetooth_emission_aml.runs/synth_1
+# Command line: vivado -log emission.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source emission.tcl
+# Log file: /user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/emission_aml/impl/tp_bluetooth_emission_aml/tp_bluetooth_emission_aml.runs/synth_1/emission.vds
+# Journal file: /user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/emission_aml/impl/tp_bluetooth_emission_aml/tp_bluetooth_emission_aml.runs/synth_1/vivado.jou
+# Running On: pc3407a, OS: Linux, CPU Frequency: 4185.152 MHz, CPU Physical cores: 8, Host memory: 16538 MB
+#-----------------------------------------------------------
+source emission.tcl -notrace

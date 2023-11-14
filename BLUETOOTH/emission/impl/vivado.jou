@@ -1,0 +1,50 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Oct 30 11:23:19 2023
+# Process ID: 5636
+# Current directory: /user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/emission/impl
+# Command line: vivado
+# Log file: /user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/emission/impl/vivado.log
+# Journal file: /user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/emission/impl/vivado.jou
+# Running On: pc3401d, OS: Linux, CPU Frequency: 800.136 MHz, CPU Physical cores: 8, Host memory: 16538 MB
+#-----------------------------------------------------------
+start_gui
+create_project tp_bluetooth_reception /user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/emission/impl/tp_bluetooth_reception -part xc7a35tcpg236-1
+set_property board_part digilentinc.com:basys3:part0:1.2 [current_project]
+set_property target_language VHDL [current_project]
+add_files -norecurse /user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/emission/rtl/reception.vhd
+add_files -fileset constrs_1 -norecurse /user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/emission/impl/basys3_reception.xdc
+set_property compxlib.questa_compiled_library_dir /nfs/opt/eda/tools/siemens/questa-2022.2/libs/xilinx_vivado-2022.1 [current_project]
+update_compile_order -fileset sources_1
+add_files -norecurse {/user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/uart/rtl/uart.vhd /user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/uart/rtl/uart_tx.vhd /user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/uart/rtl/uart_rx.vhd}
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+close_project
+create_project tp_bluetooth_emission /user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/emission/impl/tp_bluetooth_emission -part xc7a35tcpg236-1
+set_property board_part digilentinc.com:basys3:part0:1.2 [current_project]
+set_property target_language VHDL [current_project]
+add_files -norecurse {/user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/emission/rtl/emission.vhd /user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/emission/rtl/rom_message.vhd}
+add_files -fileset constrs_1 -norecurse /user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/emission/impl/basys3_emission.xdc
+set_property compxlib.questa_compiled_library_dir /nfs/opt/eda/tools/siemens/questa-2022.2/libs/xilinx_vivado-2022.1 [current_project]
+update_compile_order -fileset sources_1
+add_files -norecurse {/user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/uart/rtl/uart.vhd /user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/uart/rtl/uart_tx.vhd /user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/uart/rtl/uart_rx.vhd}
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {/user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/emission/impl/tp_bluetooth_emission/tp_bluetooth_emission.runs/impl_1/emission.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/user/didouha/E4/P1/SEI_4101A/TP_BLUETOOTH/emission/impl/tp_bluetooth_emission/tp_bluetooth_emission.runs/impl_1/emission.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]

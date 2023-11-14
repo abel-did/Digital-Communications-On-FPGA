@@ -1,0 +1,180 @@
+# //  Questa Sim-64
+# //  Version 2022.2 linux_x86_64 Apr 25 2022
+# //
+# //  Copyright 1991-2022 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+source simu.tcl
+# QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+# Start time: 11:47:12 on Oct 30,2023
+# vcom -reportprogress 300 ../../uart/rtl/uart_rx.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity uart_rx
+# -- Compiling architecture rtl of uart_rx
+# End time: 11:47:12 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+# Start time: 11:47:12 on Oct 30,2023
+# vcom -reportprogress 300 ../../uart/rtl/uart_tx.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity uart_tx
+# -- Compiling architecture rtl of uart_tx
+# End time: 11:47:13 on Oct 30,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+# Start time: 11:47:13 on Oct 30,2023
+# vcom -reportprogress 300 ../../uart/rtl/uart.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package MATH_REAL
+# -- Compiling entity uart
+# -- Compiling architecture rtl of uart
+# -- Loading package NUMERIC_STD
+# -- Loading entity uart_tx
+# -- Loading entity uart_rx
+# End time: 11:47:13 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+# Start time: 11:47:13 on Oct 30,2023
+# vcom -reportprogress 300 -2008 ../rtl/rom_message.vhd 
+# -- Loading package STANDARD
+# -- Loading package MATH_REAL
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity rom_message
+# -- Compiling architecture rtl of rom_message
+# End time: 11:47:14 on Oct 30,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+# Start time: 11:47:14 on Oct 30,2023
+# vcom -reportprogress 300 -2008 ../rtl/emission.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity emission
+# -- Compiling architecture rtl of emission
+# -- Loading entity rom_message
+# -- Loading entity uart
+# End time: 11:47:14 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+# Start time: 11:47:14 on Oct 30,2023
+# vcom -reportprogress 300 -2008 ../rtl/reception.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity reception
+# -- Compiling architecture rtl of reception
+# -- Loading entity uart
+# End time: 11:47:15 on Oct 30,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+# Start time: 11:47:15 on Oct 30,2023
+# vcom -reportprogress 300 tb_emission.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity tb_emission
+# -- Compiling architecture rtl of tb_emission
+# -- Loading entity emission
+# -- Loading entity reception
+# End time: 11:47:15 on Oct 30,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" tb_emission 
+# Start time: 11:47:15 on Oct 30,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vopt-143) Recognized 1 FSM in architecture body "emission(rtl)".
+# ** Note: (vopt-143) Recognized 1 FSM in architecture body "uart_rx(rtl)".
+# ** Note: (vopt-143) Recognized 1 FSM in architecture body "uart_tx(rtl)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading work.tb_emission(rtl)#1
+# Loading work.emission(rtl)#1
+# Loading work.rom_message(rtl)#1
+# Loading work.uart(rtl)#1
+# Loading work.uart_tx(rtl)#1
+# Loading work.uart_rx(rtl)#1
+# Loading work.reception(rtl)#1
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /tb_emission/retour/l/trans
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ps  Iteration: 0  Instance: /tb_emission/dut/l/trans
+# ** Note: data_rx : Ox02 soit en ASCII 
+#    Time: 1025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox53 soit en ASCII S
+#    Time: 2025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 3025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6D soit en ASCII m
+#    Time: 4025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox75 soit en ASCII u
+#    Time: 5025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 6025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 7025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6B soit en ASCII k
+#    Time: 8025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox21 soit en ASCII !
+#    Time: 9025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox3A soit en ASCII :
+#    Time: 10025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox04 soit en ASCII 
+#    Time: 11025 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: ACK
+#    Time: 12015 ns  Iteration: 3  Instance: /tb_emission
+# ** Note: data_rx : Ox02 soit en ASCII 
+#    Time: 12055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox53 soit en ASCII S
+#    Time: 13055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox69 soit en ASCII i
+#    Time: 14055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6D soit en ASCII m
+#    Time: 15055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox75 soit en ASCII u
+#    Time: 16055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox20 soit en ASCII  
+#    Time: 17055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6F soit en ASCII o
+#    Time: 18055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox6B soit en ASCII k
+#    Time: 19055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox21 soit en ASCII !
+#    Time: 20055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox3A soit en ASCII :
+#    Time: 21055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: data_rx : Ox04 soit en ASCII 
+#    Time: 22055 ns  Iteration: 2  Instance: /tb_emission/retour
+# ** Note: ACK
+#    Time: 23045 ns  Iteration: 3  Instance: /tb_emission
+# End time: 12:20:44 on Oct 30,2023, Elapsed time: 0:33:29
+# Errors: 0, Warnings: 3
